@@ -87,6 +87,30 @@ nav {
 .title img {
   padding: 0.3rem;
 }
+.more-events {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+#more-events {
+  padding: 1rem;
+  border: 3px solid #530595;
+  border-radius: 25px;
+  color: #530595;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  font-size: 2.8rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 300px
+  font-family: "Big Shoulders Display", monospace;
+}
+#more-events:hover {
+  color: #f5d65a;
+  background-color: #530595;
+}
 /*---------------Important Dates---------------*/
 .dates-events {
   display: flex;
@@ -308,7 +332,8 @@ footer {
 .event-cards {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .card {
   display: grid;
@@ -321,13 +346,20 @@ footer {
   background: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
-
+  margin: 2rem 0rem;
   transition: 0.3s ease-in-out;
 }
 
-.card-image {
+.card-image-left {
   grid-area: image;
   background: url(/Desktop/events/saavn.jpg);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-size: cover;
+}
+.card-image-middle {
+  grid-area: image;
+  background: url(/Desktop/events/janmashtami.jpg);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -354,6 +386,14 @@ footer {
   grid-template-rows: 1fr;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+.left {
+  background: #193674;
+}
+.middle {
+  background: #bb208c;
+}
+.right {
   background: #193674;
 }
 .card-stats .stat {
@@ -370,7 +410,7 @@ footer {
   text-transform: uppercase;
 }
 .card-stats .value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: regular;
 }
 .card-stats img {
