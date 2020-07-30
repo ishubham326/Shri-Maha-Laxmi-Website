@@ -302,7 +302,9 @@ footer {
   flex-direction: column;
 }
 .social-upcoming {
+  width: 80%;
   display: flex;
+  margin: auto;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -334,6 +336,8 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
 }
 .card {
   display: grid;
@@ -579,8 +583,11 @@ footer {
   .info1 img {
     width: 30px;
   }
+  .event-cards {
+    width: 100%;
+  }
   .card {
-    transform: scale(0.9);
+    transform: scale(0.95);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   }
   /*UPCOMING EVENTS PAGE*/
