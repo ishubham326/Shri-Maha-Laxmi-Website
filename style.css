@@ -434,6 +434,16 @@ footer {
   border: none;
   color: white;
 }
+#customAddToCalendar2 {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+#customAddToCalendar3 {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
 /*---------------Media Queries---------------*/
 @media screen and (max-width: 987px) {
   .social {
@@ -572,6 +582,33 @@ footer {
   .card {
     transform: scale(0.9);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  /*UPCOMING EVENTS PAGE*/
+  #social-upcoming-events {
+    width: 100%;
+  }
+  .social-upcoming {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+  .social-upcoming img {
+    padding: 0rem 0rem 1rem 0rem;
+    width: 70px;
+  }
+  .whatsapp-upcoming,
+  .fb-upcoming {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: none;
+  }
+  #mc_embed_signup {
+    width: 100%;
   }
 }
 
