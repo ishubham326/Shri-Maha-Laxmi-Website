@@ -151,12 +151,15 @@ nav {
 }
 
 #iphone {
+  display: flex;
   z-index: -1;
   border-radius: 10px;
   flex: 0.5 0.5 20rem;
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+#iphone img {
+  width: 80%;
 }
 
 #connect-content {
@@ -415,16 +418,17 @@ footer {
 }
 .card-stats .value {
   font-size: 1.8rem;
-  font-weight: regular;
+  font-weight: normal;
 }
 .card-stats img {
   width: 25px;
   padding-top: 1rem;
   filter: invert(1);
 }
-#calender .value {
+.calendar .value {
   font-size: 1.5rem;
 }
+
 .card-stats .border {
   border-left: 1px solid #091a3f;
   border-right: 1px solid #091a3f;
@@ -518,6 +522,9 @@ footer {
     line-height: 3rem;
   }
   /*---------------Connet With Us---------------*/
+  #iphone img {
+    width: initial;
+  }
   #bubble {
     display: block;
     position: relative;
@@ -589,6 +596,10 @@ footer {
   .card {
     transform: scale(0.95);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .card:hover {
+    transform: scale(0.95);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   }
   /*UPCOMING EVENTS PAGE*/
   #social-upcoming-events {
