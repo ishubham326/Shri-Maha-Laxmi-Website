@@ -428,7 +428,9 @@ footer {
 .calendar .value {
   font-size: 1.5rem;
 }
-
+.calendar {
+  cursor: pointer;
+}
 .card-stats .border {
   border-left: 1px solid #091a3f;
   border-right: 1px solid #091a3f;
@@ -437,6 +439,7 @@ footer {
   transform: scale(1.05);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
+/*
 #customAddToCalendar {
   background-color: transparent;
   border: none;
@@ -452,6 +455,7 @@ footer {
   border: none;
   color: white;
 }
+*/
 /*---------------Media Queries---------------*/
 @media screen and (max-width: 987px) {
   .social {

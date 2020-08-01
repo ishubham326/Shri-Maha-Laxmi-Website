@@ -71,33 +71,15 @@
                 <div class="type">Time</div>
                 <div class="value">8am-8pm</div>
               </div>
-              <div class="stat calendar">
-                <a
-                  href="https://add.eventable.com/events/5f20aa7a796ec50017055635/5f21fb1b449ac20016c7fdd0/"
-                  data-event="5f21fb1b449ac20016c7fdd0"
-                  class="eventable-link"
-                  target="_blank"
-                  data-key="5f20aa7a796ec50017055635"
-                  data-target="customAddToCalendar"
-                ></a>
-                <script>
-                  !(function (d, s, id) {
-                    var js,
-                      fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                      js = d.createElement(s);
-                      js.id = id;
-                      js.src = "https://plugins.eventable.com/eventable.js";
-                      fjs.parentNode.insertBefore(js, fjs);
-                    }
-                  })(document, "script", "eventable-script");
-                </script>
-                <button id="customAddToCalendar">
-                  <div class="value">Add To Calender</div>
-                  <div class="type">
-                    <img src="/Desktop/calendar.svg" alt="" />
-                  </div>
-                </button>
+              <div
+                class="stat calendar"
+                onclick="location.href='/Savan.ics'"
+                download="Savan_calendar"
+              >
+                <div class="value">Add To Calender</div>
+                <div class="type">
+                  <img src="/Desktop/calendar.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
