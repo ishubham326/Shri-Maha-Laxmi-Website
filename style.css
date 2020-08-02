@@ -470,6 +470,7 @@ footer {
   display: flex;
   overflow: hidden;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .laxmi {
   display: flex;
@@ -478,7 +479,7 @@ footer {
   z-index: 2;
 }
 .laxmi img {
-  max-height: 100vh;
+  height: 100vh;
 }
 .text-404 {
   display: flex;
@@ -513,6 +514,32 @@ footer {
   z-index: 1;
 }
 /*---------------Media Queries---------------*/
+@media screen and (max-width: 1130px) {
+  .main-404 {
+    overflow: visible;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-404 {
+    align-items: center;
+    transform: translateY(0);
+    height: 50vh;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .text-404 h1 {
+    position: initial;
+    font-size: 20rem;
+  }
+  .laxmi {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .laxmi img {
+    height: 50vh;
+  }
+}
 @media screen and (max-width: 987px) {
   .social {
     width: 100%;
@@ -687,6 +714,12 @@ footer {
   }
   #mc_embed_signup {
     width: 100%;
+  }
+  .text-404 p {
+    font-size: 2.1rem;
+  }
+  .text-404 h1 {
+    font-size: 15rem;
   }
 }
 
