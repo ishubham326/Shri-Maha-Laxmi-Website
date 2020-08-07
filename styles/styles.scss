@@ -399,14 +399,14 @@ footer {
 
 .card-image-left {
   grid-area: image;
-  background: url(/Desktop/events/saavn.jpg);
+  background: url("/Desktop/events/saavn.jpg");
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
   background-size: cover;
 }
 .card-image-middle {
   grid-area: image;
-  background: url(/Desktop/events/janmashtami.jpg);
+  background: url("/Desktop/events/janmashtami.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
