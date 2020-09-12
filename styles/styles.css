@@ -389,6 +389,7 @@ footer {
 
 .info1 img {
   padding-right: 1rem;
+  width: 3.2rem;
 }
 
 .footer-info {
@@ -559,7 +560,7 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/saavn.jpg");
+  background: url("/Desktop/events/karva.jpg");
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
   background-size: cover;
@@ -569,7 +570,7 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/janmashtami.jpg");
+  background: url("/Desktop/events/shraadh.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -596,11 +597,11 @@ footer {
 }
 
 .left {
-  background: #193674;
+  background: #bc5044;
 }
 
 .middle {
-  background: #bb208c;
+  background: #58868a;
 }
 
 .right {

@@ -22,13 +22,13 @@ RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20200809T021938Z
-UID:20200809T021938Z-2026677414@marudot.com
-DTSTART;VALUE=DATE:20200811
-DTEND;VALUE=DATE:20200812
-SUMMARY:Krishn Janamashtami
+DTSTAMP:20200912T014504Z
+UID:20200912T014504Z-838615217@marudot.com
+DTSTART;TZID=America/Havana:20200916T190000
+DTEND;TZID=America/Havana:20200916T210000
+SUMMARY:Sarva Pitra Amavasya
 URL:laxmimandir.com
-DESCRIPTION:We welcome you and your family to visit laddu gopal on Janamashtami. The jhoola (swing) will be set up and the temple will be open all day long.
+DESCRIPTION:The last day of shraadhs in 2020. Please feel free to come in at anytime between the time times listed below for a tarpan pooja.
 LOCATION:370 Highway 8\, Stoney Creek\, Ontario\, Canada L8G1E9
 END:VEVENT
 END:VCALENDAR
