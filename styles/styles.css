@@ -208,6 +208,25 @@ nav {
   font-size: 2rem;
 }
 
+.pandit-content {
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.pandit-content img {
+  width: 200px;
+  border-radius: 2.5rem;
+}
+
+.pandit-content span {
+  font-size: 2rem;
+}
+
 /*---------------Connet With Us---------------*/
 .everything {
   display: -webkit-box;
@@ -687,32 +706,6 @@ footer {
   font-size: 1.5rem;
 }
 
-.pandit-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 80%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  text-align: center;
-  line-height: 3.5rem;
-}
-
-.pandit-content span {
-  font-size: 2rem;
-}
-
-.acharayshukla {
-  width: 300px;
-  border-radius: 2.5rem;
-}
-
 /*
   #customAddToCalendar {
     background-color: transparent;
@@ -920,7 +913,10 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .acharayshukla {
+  .pandit-content {
+    width: 100%;
+  }
+  .acharyashukla {
     width: 200px;
     border-radius: 2.5rem;
   }
@@ -937,8 +933,7 @@ footer {
   label,
   input,
   p,
-  address,
-  a {
+  address {
     font-family: "Big Shoulders Display", monospace;
     font-size: 2.5rem;
   }
@@ -1091,6 +1086,13 @@ footer {
     padding: 0rem 0rem 1rem 0rem;
     width: 70px;
   }
+  .pandit-content {
+    width: 100%;
+  }
+  .pandit-content img {
+    width: 200px;
+    border-radius: 2.5rem;
+  }
   .whatsapp-upcoming,
   .fb-upcoming {
     -webkit-box-pack: center;
@@ -1112,10 +1114,6 @@ footer {
   }
   #mc_embed_signup {
     width: 100%;
-  }
-  .acharayshukla {
-    width: 200px;
-    border-radius: 2.5rem;
   }
   .text-404 p {
     font-size: 2.1rem;
