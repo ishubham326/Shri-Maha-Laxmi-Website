@@ -316,7 +316,7 @@ input[type="submit"] {
   background-color: transparent;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   cursor: pointer;
 }
 
@@ -596,6 +596,22 @@ footer {
   font-size: 1.8rem;
 }
 
+.album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.embedsocial-album {
+  width: 80%;
+}
+
 .left {
   background: #bc5044;
 }
@@ -669,6 +685,32 @@ footer {
 
 .calendar .value {
   font-size: 1.5rem;
+}
+
+.pandit-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.pandit-content span {
+  font-size: 2rem;
+}
+
+.acharayshukla {
+  width: 300px;
+  border-radius: 2.5rem;
 }
 
 /*
@@ -878,6 +920,10 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .acharayshukla {
+    width: 200px;
+    border-radius: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -891,7 +937,9 @@ footer {
   label,
   input,
   p,
-  address {
+  address,
+  a {
+    font-family: "Big Shoulders Display", monospace;
     font-size: 2.5rem;
   }
   /*---------------Header---------------*/
@@ -1064,6 +1112,10 @@ footer {
   }
   #mc_embed_signup {
     width: 100%;
+  }
+  .acharayshukla {
+    width: 200px;
+    border-radius: 2.5rem;
   }
   .text-404 p {
     font-size: 2.1rem;

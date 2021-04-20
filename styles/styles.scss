@@ -229,7 +229,7 @@ input[type="submit"] {
   color: #530595;
   background-color: transparent;
   transition: 0.3s ease-in-out;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   cursor: pointer;
 
   &:hover {
@@ -428,6 +428,14 @@ footer {
     font-size: 1.8rem;
   }
 }
+.album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.embedsocial-album {
+  width: 80%;
+}
 
 .left {
   background: #bc5044;
@@ -487,6 +495,23 @@ footer {
   }
 }
 
+.pandit-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5rem;
+
+  span {
+    font-size: 2rem;
+  }
+}
+.acharayshukla {
+  width: 300px;
+  border-radius: 2.5rem;
+}
 /*
   #customAddToCalendar {
     background-color: transparent;
@@ -638,6 +663,10 @@ footer {
   .info1 {
     justify-content: center;
   }
+  .acharayshukla {
+    width: 200px;
+    border-radius: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -651,7 +680,9 @@ footer {
   label,
   input,
   p,
-  address {
+  address,
+  a {
+    font-family: "Big Shoulders Display", monospace;
     font-size: 2.5rem;
   }
   /*---------------Header---------------*/
@@ -795,6 +826,10 @@ footer {
     width: 100%;
   }
 
+  .acharayshukla {
+    width: 200px;
+    border-radius: 2.5rem;
+  }
   .text-404 {
     p {
       font-size: 2.1rem;
