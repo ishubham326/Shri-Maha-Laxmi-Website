@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="2" viewBox="0 0 252 2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f7cc20;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <line id="Line_2" data-name="Line 2" class="cls-1" x2="250" transform="translate(1 1)"/>
+</svg>
