@@ -1,19 +1,18 @@
 /*---------------Global Styles---------------*/
 /*---------------Font Properties and Colors---------------*/
 
-  $heading-font: 'Great Vibes', cursive;
-  $body-font: 'Open Sans', sans-serif;
-  $dark-purple: #530595;
-  $yellow: #F7CC20;
-  $body-color: #2A2A34;
-  $sub-heading-color: #434343;
-  $heading-size: 4.3rem;
-  $sub-heading-size: 2.2rem;
-  $body-size: 1.8rem;
-  $font-regular: 400;
-  $font-semibold: 600;
-  $font-bold: 700;
-
+$heading-font: "Great Vibes", cursive;
+$body-font: "Open Sans", sans-serif;
+$dark-purple: #530595;
+$yellow: #f7cc20;
+$body-color: #2a2a34;
+$sub-heading-color: #434343;
+$heading-size: 4.3rem;
+$sub-heading-size: 2.2rem;
+$body-size: 1.8rem;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
 
 //For font sizes
 
@@ -23,21 +22,25 @@
   box-sizing: border-box;
   //letter-spacing: -2rem;
 }
-html, body {
+.main {
+  overflow: hidden;
+}
+html,
+body {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
   /*1rem=10px*/
 }
 
-body,  
-input{
+body,
+input {
   font-family: $body-font;
   font-size: $body-size;
 }
 
-body{
+body {
   color: $body-color;
 }
 
@@ -48,16 +51,15 @@ h1 {
   font-weight: $font-regular;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-
-button{
+button {
   cursor: pointer;
   font-family: $body-font;
   font-weight: $font-bold;
@@ -71,7 +73,7 @@ button{
   margin: 1.5rem 0 0 0;
 }
 
-.button-links{
+.button-links {
   cursor: pointer;
   font-family: $body-font;
   font-weight: $font-bold;
@@ -86,17 +88,16 @@ button{
     color: $dark-purple;
     background-color: $yellow;
   }
-
 }
 /*---------------Landing Page----------------*/
 
-.container{
+.container {
   //max-width: 968px;
   margin: 0 4rem;
 }
 
 /*---------------Header---------------*/
-.header{
+.header {
   width: 100%;
   position: sticky;
   top: 0;
@@ -105,35 +106,34 @@ button{
   background-color: $dark-purple;
   transition: 0.5s;
 }
-.animate{
+.animate {
   top: -100%;
 }
 /*---------------Nav---------------*/
-.nav{
+.nav {
   height: 12rem;
   display: flex;
-  //position: sticky;
+  position: sticky;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-
 }
 
 .nav-logo,
 .nav-close,
-.nav-toggle{
+.nav-toggle {
   color: $yellow;
 }
-.nav-logo{
+.nav-logo {
   display: flex;
   align-items: center;
   column-gap: 1rem;
   font-family: $heading-font;
-  font-size: $heading-size - .5rem;
+  font-size: $heading-size - 0.5rem;
   margin-bottom: 1rem;
   position: relative;
 }
-.nav-logo span{
+.nav-logo span {
   font-family: $body-font;
   font-size: $body-size;
   position: absolute;
@@ -141,41 +141,40 @@ button{
   left: 12rem;
   font-weight: $font-semibold;
 }
-.nav-menu{
+.nav-menu {
   font-size: $sub-heading-size;
 }
-.nav-list{
+.nav-list {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   column-gap: 2rem;
   font-size: $body-size;
-
 }
-.nav-link{
+.nav-link {
   color: $yellow;
   font-weight: $font-semibold;
   transition: 0.3s;
 }
-.nav-link:hover{
+.nav-link:hover {
   //color: #D14D4D;
   border-bottom: $yellow 0.2rem solid;
-
 }
-.nav-toggle{
+.nav-toggle {
   display: none;
 }
 
-.nav-close{
+.nav-close {
   display: none;
 }
 
-.covid-content{
+.covid-content,
+.service-content {
   text-align: center;
   margin: 1.5rem 20rem;
 }
 /*---------------Upcoming Events----------------*/
-.event{
+.event {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,18 +193,18 @@ button{
     padding: 0.3rem;
   }
 }
-.mandela{
+.mandela {
   opacity: 0.2;
   height: auto;
   z-index: -1;
   position: absolute;
 }
-#mandela-1{
+#mandela-1 {
   margin: 0 70rem 0 0;
   max-width: 45rem;
   animation: spin 100s infinite alternate ease;
 }
-#mandela-2{
+#mandela-2 {
   margin: 55rem 0 0 60rem;
   max-width: 30rem;
   animation: spin 30s infinite alternate-reverse ease;
@@ -220,13 +219,11 @@ button{
   z-index: 5;
 }
 @keyframes spin {
-  from{
+  from {
     transform: rotate(0deg);
-
   }
-  to{
+  to {
     transform: rotate(360deg);
-
   }
 }
 .card {
@@ -265,7 +262,6 @@ button{
     color: $body-color;
     font-family: $body-font;
     font-size: $body-size;
-
   }
 }
 
@@ -319,15 +315,14 @@ button{
 
 /*---------------Important Dates----------------*/
 
-.dates-rec{
+.dates-rec {
   display: flex;
   justify-content: center;
   margin: auto;
   padding: 3rem 0;
   color: $dark-purple;
-
 }
-.dates-events{
+.dates-events {
   background-color: #efe8f5;
   font-size: $body-size;
   //justify-content: center;
@@ -335,13 +330,13 @@ button{
   padding: 2rem 1.5rem;
   border-radius: 2.5rem;
   text-align: center;
-  
-  h2{
+
+  h2 {
     padding-bottom: 1rem;
   }
 }
 
-.a{
+.a {
   display: flex;
   justify-content: center;
   position: relative;
@@ -349,30 +344,29 @@ button{
   padding-bottom: 2rem;
 }
 
-#mandela-3{
+#mandela-3 {
   margin: -20rem 70rem 0 0;
   max-width: 40rem;
   animation: spin 100s infinite alternate ease;
 }
 
 /*---------------About Us----------------*/
-.about{
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 10rem;
   //flex-direction: column;
 }
-.laxmi{
+.laxmi {
   flex: 1 1 auto;
   max-width: 600px;
   min-width: 30vw;
   height: auto;
   padding: 3rem;
   margin: auto;
-  
 }
-.about-title-text{
+.about-title-text {
   text-align: left;
   flex: 1 1 auto;
   line-height: 4rem;
@@ -383,55 +377,65 @@ button{
   max-width: 50vw;
   min-width: 20vw;
   margin: auto;
-  p{
+  p {
     padding: 3rem 0;
   }
 }
 
 /*---------------Pandit Ji----------------*/
-#priest{
+#priest {
   position: relative;
 }
-.priest-content{
+.priest-content {
   display: flex;
   margin: 0 20rem;
   position: relative;
-
 }
-.pandit-title-mobile{
+.pandit-title-mobile {
   display: none;
 }
-.pandit-title-desktop{
+.pandit-title-desktop {
   margin: 0;
 }
-.pandit{
+.pandit {
   max-width: 200px;
   height: auto;
   z-index: 10;
   border-radius: 2.5rem;
 }
-.priest-text{
+.priest-text {
   padding: 0 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 
-  p{
+  p {
     line-height: 4rem;
   }
 
-  a{
+  a {
     margin: 2rem 0 0 0;
-  } 
+  }
 }
 
-#mandela-4{
+#mandela-4 {
   margin: -15rem 0 0 -15rem;
   max-width: 50rem;
   animation: spin 100s infinite alternate ease;
 }
 
+/*--------------SERVICES---------------*/
+#services {
+  margin: 10rem 0;
+}
+.service-content {
+  text-align: center;
+  margin: 1.5rem 20rem;
+  p {
+    margin-bottom: 5rem;
+  }
+}
 /*---------------Connet With Us---------------*/
 .connect-everything {
   display: flex;
@@ -439,10 +443,11 @@ button{
   margin: 3rem 15rem;
   //position: relative;
 }
-#mandela-5{
+#mandela-5 {
   width: 400px;
   margin: -30rem -50rem 0 0;
   animation: spin 30s infinite alternate-reverse ease;
+  overflow: hidden;
 }
 #iphone {
   display: flex;
@@ -453,7 +458,6 @@ button{
 
   img {
     max-width: 65vw;
-
   }
 }
 
@@ -502,7 +506,6 @@ input {
 
   &:focus {
     border-bottom: 2px solid $yellow;
-
   }
 }
 
@@ -524,6 +527,7 @@ input[type="submit"] {
 }
 
 #mc_embed_signup {
+  //display: none;
   width: 80%;
 }
 .indicates-required {
@@ -543,39 +547,35 @@ form label {
   font-size: 2rem;
 }
 /*---------------Footer----------------*/
-footer{
+footer {
   background-color: $dark-purple;
   z-index: 10;
 }
-.footer{
+.footer {
   height: 12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.footer-list{
+.footer-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 1rem;
   font-size: $body-size;
-
 }
-.footer-link{
+.footer-link {
   color: $yellow;
   font-weight: $font-semibold;
   transition: 0.3s;
 }
-.footer-link:hover{
+.footer-link:hover {
   //color: #D14D4D;
   border-bottom: $yellow 0.2rem solid;
-
 }
 
-
-.scrollup{
+.scrollup {
   position: fixed;
   bottom: -30%;
   right: 2rem;
@@ -588,18 +588,18 @@ footer{
   font-size: 2rem;
   transition: 0.3s;
 
-  &:hover{
+  &:hover {
     opacity: 1;
   }
-
 }
 
-.show-scroll{
+.show-scroll {
   bottom: 2rem;
 }
 
 //404
-.page-404, .text-404{
+.page-404,
+.text-404 {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -607,10 +607,9 @@ footer{
   margin: auto;
   height: 100vh;
   width: auto;
-
 }
 /*---------------Calendar Page----------------*/
-.cal-download-buttons{
+.cal-download-buttons {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -620,22 +619,22 @@ footer{
   align-items: center;
   justify-content: space-around;
 
-  p{
+  p {
     font-size: 10rem;
     font-weight: $font-bold;
-    color: #D14D4D
+    color: #d14d4d;
   }
 }
-.cal-button{
+.cal-button {
   margin: 1.5rem 1.5rem;
 }
-.months{
+.months {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
 }
-.month-rec{
+.month-rec {
   background-color: #efe8f5;
   color: $dark-purple;
   display: flex;
@@ -645,43 +644,75 @@ footer{
   padding: 1rem;
   margin: 1.5rem;
   width: 370px;
-
 }
-.dates{
+.dates {
   text-align: justify;
   font-size: $body-size;
 
-  strong{
-    color:#D14D4D;
+  strong {
+    color: #d14d4d;
+  }
+}
+/*---------------Booking Page----------------*/
+#marriage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.booking-items {
+  margin: 1.5rem;
+  width: 85vw;
+  h3 {
+    color: $dark-purple;
+  }
+  &:last-child p {
+    margin-bottom: 3rem;
+  }
+}
+.items {
+  margin-left: 5rem;
+  ul {
+    list-style: circle;
+    list-style-position: inside;
   }
 }
 
-@media screen and (max-width: 1575px){
+hr {
+  width: 90vw;
+  opacity: 0.2;
+}
 
-  .container{
+@media screen and (max-width: 1575px) {
+  .container {
     margin: 0 3rem;
   }
-}
-@media screen and (max-width: 960px){
-
-  .mandela{
+  #mandela-5 {
     display: none;
   }
-  .container{
+}
+
+@media screen and (max-width: 960px) {
+  .mandela {
+    display: none;
+  }
+  .container {
     margin: 0 2rem;
   }
-  .nav-logo{
+  .nav-logo {
     font-size: 3.1rem;
   }
-  .nav-logo span{
+  .nav-logo span {
     font-size: $body-size - 0.3rem;
     left: 10rem;
   }
-  .nav-menu{
+  .nav-menu {
     position: fixed;
     background-color: $dark-purple;
-    top: -100%;
-    left:0;
+    top: -500%;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 50% 0;
@@ -689,29 +720,29 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    //transition: 0.3s;
   }
-  .nav-logo-img{
+  .nav-logo-img {
     width: 70px;
     height: auto;
   }
-  .nav-list{
+  .nav-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1.5rem;
     font-size: $sub-heading-size;
   }
-  .show-menu{
+  .show-menu {
     top: 0;
   }
-  .nav-toggle{
+  .nav-toggle {
     display: inline-flex;
     font-size: 3rem;
     cursor: pointer;
   }
-  
-  .nav-close{
+
+  .nav-close {
     display: inline-flex;
     font-size: 4rem;
     position: absolute;
@@ -719,68 +750,71 @@ footer{
     right: 1.5rem;
     cursor: pointer;
   }
-
-  .covid-content{
+  #services {
+    margin: 3rem 0 5rem 0;
+  }
+  .covid-content,
+  .service-content {
     margin: 1.5rem 5rem;
   }
-  .about{
+  .about {
     flex-direction: column;
     margin: 0 3rem;
   }
 
-  .about-title-text{
+  .about-title-text {
     text-align: center;
     line-height: 3rem;
     display: flex;
     align-items: center;
     max-width: 100vw;
   }
-  .laxmi{
+  .laxmi {
     max-width: 85vw;
     height: auto;
   }
 
-  .priest-content{
+  .priest-content {
     display: flex;
     margin: 0 3rem;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
 
-  .pandit-title-mobile{
+  .pandit-title-mobile {
     display: flex;
   }
-  .pandit-title-desktop{
+  .pandit-title-desktop {
     display: none;
   }
-  .pandit{
+  .pandit {
     margin: 3rem;
   }
-  .priest-text{
+  .priest-text {
     padding: 0rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-  
-    p{
+
+    p {
       line-height: 3rem;
     }
-    a{
+    a {
       margin: 2rem 0;
-    }  
-  }
-  .connect-everything{
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    margin: 3rem 3rem;
-
+    }
   }
 
   /*---------------Connet With Us---------------*/
-  #iphone  {
+  .connect-everything {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 3rem 3rem;
+  }
+
+  #iphone {
     display: none;
     max-width: 80vw;
     margin-top: 3rem;
@@ -841,7 +875,7 @@ footer{
     width: 90%;
   }
 
-  .footer{
+  .footer {
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -850,16 +884,37 @@ footer{
     z-index: 100;
     row-gap: 2rem;
   }
-  .footer-list{
+  .footer-list {
     align-items: center;
   }
-  .footer-item{
+  .footer-item {
     font-size: $body-size - 0.2rem;
   }
-
+  .booking-items {
+    &:last-child {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
 }
 
-
+@media screen and (max-width: 400px) {
+  .dates {
+    font-size: $body-size - 0.2rem;
+  }
+  .dates-events {
+    p {
+      font-size: $body-size - 0.2rem;
+    }
+  }
+  #mc_embed_signup {
+    display: none;
+  }
+  .footer-item {
+    font-size: $body-size - 0.3rem;
+  }
+}
 @keyframes bounce {
   0% {
     transform: translateY(0%);

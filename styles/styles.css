@@ -7,10 +7,14 @@
           box-sizing: border-box;
 }
 
-html, body {
+.main {
+  overflow: hidden;
+}
+
+html,
+body {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   /*1rem=10px*/
 }
 
@@ -21,7 +25,7 @@ input {
 }
 
 body {
-  color: #2A2A34;
+  color: #2a2a34;
 }
 
 h1 {
@@ -44,7 +48,7 @@ button {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #F7CC20;
+  color: #f7cc20;
   border: none;
   outline: none;
   background-color: #530595;
@@ -58,7 +62,7 @@ button {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #F7CC20;
+  color: #f7cc20;
   background-color: #530595;
   padding: 1rem 2rem;
   border-radius: 2.5rem;
@@ -68,7 +72,7 @@ button {
 
 .button-links:hover {
   color: #530595;
-  background-color: #F7CC20;
+  background-color: #f7cc20;
 }
 
 /*---------------Landing Page----------------*/
@@ -99,6 +103,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -111,7 +117,7 @@ button {
 .nav-logo,
 .nav-close,
 .nav-toggle {
-  color: #F7CC20;
+  color: #f7cc20;
 }
 
 .nav-logo {
@@ -159,14 +165,14 @@ button {
 }
 
 .nav-link {
-  color: #F7CC20;
+  color: #f7cc20;
   font-weight: 600;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .nav-link:hover {
-  border-bottom: #F7CC20 0.2rem solid;
+  border-bottom: #f7cc20 0.2rem solid;
 }
 
 .nav-toggle {
@@ -177,7 +183,8 @@ button {
   display: none;
 }
 
-.covid-content {
+.covid-content,
+.service-content {
   text-align: center;
   margin: 1.5rem 20rem;
 }
@@ -326,7 +333,7 @@ button {
 }
 
 .card-text p {
-  color: #2A2A34;
+  color: #2a2a34;
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
 }
@@ -376,8 +383,8 @@ button {
 }
 
 .card-stats .border {
-  border-left: 1px solid #F7CC20;
-  border-right: 1px solid #F7CC20;
+  border-left: 1px solid #f7cc20;
+  border-right: 1px solid #f7cc20;
 }
 
 .card-stats img {
@@ -551,6 +558,20 @@ button {
           animation: spin 100s infinite alternate ease;
 }
 
+/*--------------SERVICES---------------*/
+#services {
+  margin: 10rem 0;
+}
+
+.service-content {
+  text-align: center;
+  margin: 1.5rem 20rem;
+}
+
+.service-content p {
+  margin-bottom: 5rem;
+}
+
 /*---------------Connet With Us---------------*/
 .connect-everything {
   display: -webkit-box;
@@ -566,6 +587,7 @@ button {
   width: 400px;
   margin: -30rem -50rem 0 0;
   animation: spin 30s infinite alternate-reverse ease;
+  overflow: hidden;
 }
 
 #iphone {
@@ -652,7 +674,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 2px solid #F7CC20;
+  border-bottom: 2px solid #f7cc20;
 }
 
 input[type="submit"] {
@@ -660,7 +682,7 @@ input[type="submit"] {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #F7CC20;
+  color: #f7cc20;
   background-color: #530595;
   padding: 1rem 2rem;
   border-radius: 2.5rem;
@@ -670,7 +692,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   color: #530595;
-  background-color: #F7CC20;
+  background-color: #f7cc20;
 }
 
 #mc_embed_signup {
@@ -732,14 +754,14 @@ footer {
 }
 
 .footer-link {
-  color: #F7CC20;
+  color: #f7cc20;
   font-weight: 600;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .footer-link:hover {
-  border-bottom: #F7CC20 0.2rem solid;
+  border-bottom: #f7cc20 0.2rem solid;
 }
 
 .scrollup {
@@ -750,7 +772,7 @@ footer {
   border-radius: 2.5rem;
   padding: 1rem;
   opacity: 0.5;
-  color: #F7CC20;
+  color: #f7cc20;
   z-index: 50;
   font-size: 2rem;
   -webkit-transition: 0.3s;
@@ -765,7 +787,8 @@ footer {
   bottom: 2rem;
 }
 
-.page-404, .text-404 {
+.page-404,
+.text-404 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,7 +832,7 @@ footer {
 .cal-download-buttons p {
   font-size: 10rem;
   font-weight: 700;
-  color: #D14D4D;
+  color: #d14d4d;
 }
 
 .cal-button {
@@ -853,12 +876,61 @@ footer {
 }
 
 .dates strong {
-  color: #D14D4D;
+  color: #d14d4d;
+}
+
+/*---------------Booking Page----------------*/
+#marriage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.booking-items {
+  margin: 1.5rem;
+  width: 85vw;
+}
+
+.booking-items h3 {
+  color: #530595;
+}
+
+.booking-items:last-child p {
+  margin-bottom: 3rem;
+}
+
+.items {
+  margin-left: 5rem;
+}
+
+.items ul {
+  list-style: circle;
+  list-style-position: inside;
+}
+
+hr {
+  width: 90vw;
+  opacity: 0.2;
 }
 
 @media screen and (max-width: 1575px) {
   .container {
     margin: 0 3rem;
+  }
+  #mandela-5 {
+    display: none;
   }
 }
 
@@ -879,7 +951,7 @@ footer {
   .nav-menu {
     position: fixed;
     background-color: #530595;
-    top: -100%;
+    top: -500%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -934,7 +1006,11 @@ footer {
     right: 1.5rem;
     cursor: pointer;
   }
-  .covid-content {
+  #services {
+    margin: 3rem 0 5rem 0;
+  }
+  .covid-content,
+  .service-content {
     margin: 1.5rem 5rem;
   }
   .about {
@@ -1009,6 +1085,7 @@ footer {
   .priest-text a {
     margin: 2rem 0;
   }
+  /*---------------Connet With Us---------------*/
   .connect-everything {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1018,7 +1095,6 @@ footer {
             flex-direction: column-reverse;
     margin: 3rem 3rem;
   }
-  /*---------------Connet With Us---------------*/
   #iphone {
     display: none;
     max-width: 80vw;
@@ -1110,6 +1186,30 @@ footer {
   }
   .footer-item {
     font-size: 1.6rem;
+  }
+  .booking-items:last-child {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .dates {
+    font-size: 1.6rem;
+  }
+  .dates-events p {
+    font-size: 1.6rem;
+  }
+  #mc_embed_signup {
+    display: none;
+  }
+  .footer-item {
+    font-size: 1.5rem;
   }
 }
 
