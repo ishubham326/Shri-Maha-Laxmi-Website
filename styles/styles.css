@@ -89,8 +89,8 @@ button {
   left: 0;
   z-index: 100;
   background-color: #530595;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .animate {
@@ -312,7 +312,7 @@ button {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/newyear.jpg");
+  background: url("/Desktop/events/hanuman.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -647,6 +647,9 @@ button {
           justify-content: center;
   text-align: justify;
   width: 80%;
+}
+
+.social:last-child {
   margin-top: 6rem;
 }
 
@@ -696,6 +699,7 @@ input[type="submit"]:hover {
 }
 
 #mc_embed_signup {
+  display: none;
   width: 80%;
 }
 
@@ -1159,6 +1163,7 @@ hr {
     width: 70px;
   }
   #mc_embed_signup {
+    display: none;
     width: 90%;
   }
   .footer {

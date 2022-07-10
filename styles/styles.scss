@@ -104,7 +104,7 @@ button {
   left: 0;
   z-index: 100;
   background-color: $dark-purple;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .animate {
   top: -100%;
@@ -242,7 +242,7 @@ button {
 
 .card-image {
   grid-area: image;
-  background: url("/Desktop/events/newyear.jpg");
+  background: url("/Desktop/events/hanuman.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -479,7 +479,9 @@ button {
   justify-content: center;
   text-align: justify;
   width: 80%;
-  margin-top: 6rem;
+  &:last-child {
+    margin-top: 6rem;
+  }
 
   img {
     width: 70px;
@@ -527,7 +529,7 @@ input[type="submit"] {
 }
 
 #mc_embed_signup {
-  //display: none;
+  display: none;
   width: 80%;
 }
 .indicates-required {
@@ -872,6 +874,7 @@ hr {
   }
 
   #mc_embed_signup {
+    display: none;
     width: 90%;
   }
 
