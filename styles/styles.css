@@ -312,7 +312,7 @@ button {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/hanuman.jpg");
+  background: url("/Desktop/events/janmashtami2.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -475,7 +475,7 @@ button {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  line-height: 4rem;
+  line-height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,7 +544,7 @@ button {
 }
 
 .priest-text p {
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 .priest-text a {

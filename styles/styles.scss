@@ -242,7 +242,7 @@ button {
 
 .card-image {
   grid-area: image;
-  background: url("/Desktop/events/hanuman.jpg");
+  background: url("/Desktop/events/janmashtami2.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -369,7 +369,7 @@ button {
 .about-title-text {
   text-align: left;
   flex: 1 1 auto;
-  line-height: 4rem;
+  line-height: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -411,7 +411,7 @@ button {
   align-items: flex-start;
 
   p {
-    line-height: 4rem;
+    line-height: 3rem;
   }
 
   a {
