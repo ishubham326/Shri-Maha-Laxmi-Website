@@ -7,8 +7,8 @@ This is the first website I've made from scratch, and will continue to improve o
 
 ## Web
 
-![alt text](https://github.com/ishubham326/Shri-Maha-Laxmi-Website/blob/master/Webpage.png)
+![alt text](https://github.com/ishubham326/Shri-Maha-Laxmi-Website/blob/main/Webpage.png)
 
 ## Mobile
 
-![alt text](https://github.com/ishubham326/Shri-Maha-Laxmi-Website/blob/master/Mobile.png)
+![alt text](https://github.com/ishubham326/Shri-Maha-Laxmi-Website/blob/main/Mobile.png)
