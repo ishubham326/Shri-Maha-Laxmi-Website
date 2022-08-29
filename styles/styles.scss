@@ -229,7 +229,7 @@ button {
 .card {
   display: grid;
   grid-template-columns: 312px;
-  grid-template-rows: 17.6rem 21rem 9.8rem;
+  grid-template-rows: 17.6rem 26rem 9.8rem;
   grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -242,7 +242,7 @@ button {
 
 .card-image {
   grid-area: image;
-  background: url("/Desktop/events/janmashtami2.jpg");
+  background: url("/Desktop/events/ramayan.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
