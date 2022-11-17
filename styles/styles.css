@@ -420,7 +420,7 @@ button {
   padding: 2rem 1.5rem;
   border-radius: 2.5rem;
   text-align: center;
-  font-family: "Roboto Mono", monospace;
+  font-family: monospace;
 }
 
 .dates-events h2 {
@@ -884,7 +884,7 @@ footer {
 }
 
 .dates {
-  font-family: "Roboto Mono", monospace;
+  font-family: monospace;
   font-size: 20px;
   padding: 1rem 0;
   -webkit-font-kerning: none;
