@@ -614,6 +614,14 @@ footer {
   width: auto;
 }
 /*---------------Calendar Page----------------*/
+#searchInput {
+  width: 80vw;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid $dark-purple;
+  margin-bottom: 12px;
+}
+
 .cal-download-buttons {
   display: flex;
   flex-direction: column;
@@ -624,7 +632,7 @@ footer {
   align-items: center;
   justify-content: space-around;
 
-  p {
+  h6 {
     font-size: 10rem;
     font-weight: $font-bold;
     color: #d14d4d;

@@ -71,5 +71,23 @@ sr.reveal(".service-content", { delay: 200 });
 sr.reveal(".connect-right-content");
 sr.reveal(".social", { delay: 100 });
 sr.reveal(".cal-download-buttons");
-sr.reveal(".month-rec");
+// sr.reveal(".month-rec");
 sr.reveal(".booking-items");
+
+function search() {
+  var input, filter, li, date, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  li = document.getElementsByTagName("p");
+
+  // console.log(li);
+  for (i = 0; i < li.length; i++) {
+    date = li[i];
+    txtValue = date.textContent || date.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
