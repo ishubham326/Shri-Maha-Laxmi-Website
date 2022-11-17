@@ -292,10 +292,10 @@ button {
 .card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 312px;
-      grid-template-columns: 312px;
-  -ms-grid-rows: 17.6rem 20rem 9.8rem;
-      grid-template-rows: 17.6rem 20rem 9.8rem;
+  -ms-grid-columns: 320px;
+      grid-template-columns: 320px;
+  -ms-grid-rows: 17.6rem 18rem 9.8rem;
+      grid-template-rows: 17.6rem 18rem 9.8rem;
       grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -420,9 +420,11 @@ button {
   padding: 2rem 1.5rem;
   border-radius: 2.5rem;
   text-align: center;
+  font-family: "Roboto Mono", monospace;
 }
 
 .dates-events h2 {
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 1rem;
 }
 
@@ -875,8 +877,10 @@ footer {
 }
 
 .dates {
+  font-family: "Roboto Mono", monospace;
   text-align: justify;
-  font-size: 1.8rem;
+  font-size: 20px;
+  padding: 1rem 0;
 }
 
 .dates strong {
@@ -1204,11 +1208,18 @@ hr {
 }
 
 @media screen and (max-width: 400px) {
+  .nav-logo {
+    font-size: 2.6rem;
+  }
+  .nav-logo span {
+    font-size: 1.3rem;
+    left: 9rem;
+  }
   .dates {
-    font-size: 1.6rem;
+    font-size: 18px;
   }
   .dates-events p {
-    font-size: 1.6rem;
+    font-size: 18px;
   }
   #mc_embed_signup {
     display: none;
