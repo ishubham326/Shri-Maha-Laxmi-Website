@@ -879,6 +879,8 @@ footer {
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   padding: 1rem 0;
+  -webkit-font-kerning: none;
+          font-kerning: none;
 }
 
 .dates strong {
