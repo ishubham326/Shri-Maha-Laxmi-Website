@@ -1215,11 +1215,11 @@ hr {
     font-size: 1.3rem;
     left: 9rem;
   }
-  .dates {
-    font-size: 18px;
+  .dates p {
+    font-size: 17px;
   }
   .dates-events p {
-    font-size: 18px;
+    font-size: 17px;
   }
   #mc_embed_signup {
     display: none;
