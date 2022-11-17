@@ -415,12 +415,13 @@ button {
 
 .dates-events {
   background-color: #efe8f5;
-  font-size: 1.8rem;
+  font-size: 20px;
   display: inline-block;
   padding: 2rem 1.5rem;
   border-radius: 2.5rem;
   text-align: center;
   font-family: monospace;
+  line-height: 26px;
 }
 
 .dates-events h2 {
@@ -889,6 +890,7 @@ footer {
   padding: 1rem 0;
   -webkit-font-kerning: none;
           font-kerning: none;
+  line-height: 26px;
 }
 
 .dates strong {
@@ -953,9 +955,11 @@ hr {
 @media screen and (max-width: 960px) {
   .dates p {
     font-size: 18px;
+    line-height: 22px;
   }
   .dates-events p {
     font-size: 18px;
+    line-height: 22px;
   }
   .mandela {
     display: none;

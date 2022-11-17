@@ -325,13 +325,14 @@ button {
 }
 .dates-events {
   background-color: #efe8f5;
-  font-size: $body-size;
+  font-size: 20px;
   //justify-content: center;
   display: inline-block;
   padding: 2rem 1.5rem;
   border-radius: 2.5rem;
   text-align: center;
   font-family: $font-mono;
+  line-height: 26px;
 
   h2 {
     font-family: $body-font;
@@ -662,7 +663,7 @@ footer {
   font-size: 20px;
   padding: 1rem 0;
   font-kerning: none;
-
+  line-height: 26px;
   strong {
     color: #d14d4d;
   }
@@ -711,10 +712,12 @@ hr {
 @media screen and (max-width: 960px) {
   .dates p {
     font-size: 18px;
+    line-height: 22px;
   }
   .dates-events {
     p {
       font-size: 18px;
+      line-height: 22px;
     }
   }
   .mandela {
