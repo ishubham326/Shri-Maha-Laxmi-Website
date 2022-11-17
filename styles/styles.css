@@ -943,6 +943,12 @@ hr {
 }
 
 @media screen and (max-width: 960px) {
+  .dates p {
+    font-size: 18px;
+  }
+  .dates-events p {
+    font-size: 18px;
+  }
   .mandela {
     display: none;
   }
@@ -1214,12 +1220,6 @@ hr {
   .nav-logo span {
     font-size: 1.3rem;
     left: 9rem;
-  }
-  .dates p {
-    font-size: 17px;
-  }
-  .dates-events p {
-    font-size: 17px;
   }
   #mc_embed_signup {
     display: none;
