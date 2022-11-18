@@ -772,22 +772,26 @@ footer {
 }
 
 .scrollup {
+  text-align: center;
   position: fixed;
   bottom: -30%;
   right: 2rem;
   background-color: #530595;
-  border-radius: 2.5rem;
-  padding: 1rem;
-  opacity: 0.5;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.6;
   color: #f7cc20;
   z-index: 50;
-  font-size: 2rem;
+  font-size: 3rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .scrollup:hover {
   opacity: 1;
+  color: #530595;
+  background-color: #f7cc20;
 }
 
 .show-scroll {
@@ -816,10 +820,13 @@ footer {
 
 /*---------------Calendar Page----------------*/
 #searchInput {
+  background-image: url("/Desktop/search.png");
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
   width: 80vw;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #530595;
+  border: 2px solid #530595;
   margin-bottom: 12px;
 }
 

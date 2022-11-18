@@ -77,7 +77,7 @@ sr.reveal(".booking-items");
 function search() {
   var input, filter, li, date, i, txtValue;
   input = document.getElementById("searchInput");
-  filter = input.value.toUpperCase();
+  filter = input.value.toUpperCase().trim();
   li = document.getElementsByTagName("p");
 
   // console.log(li);
