@@ -74,6 +74,8 @@ sr.reveal(".cal-download-buttons");
 // sr.reveal(".month-rec");
 sr.reveal(".booking-items");
 
+/*=============== SEARCH BAR ===============*/
+
 function search() {
   var input, filter, li, date, i, txtValue;
   input = document.getElementById("searchInput");
@@ -89,5 +91,36 @@ function search() {
     } else {
       li[i].style.display = "none";
     }
+  }
+}
+
+/*=============== SUNDAY KIRTAN ===============*/
+let autoDate = true;
+const eventDate = document.getElementById("eventDate");
+
+if (autoDate) {
+  var date = new Date();
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  if (date.getDate() == 0)
+    console.log(
+      "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website"
+    );
+  else {
+    date.setDate(date.getDate() + ((0 + 7 - date.getDay()) % 7 || 7));
+    eventDate.innerHTML = `${months[date.getMonth()]} ${date.getUTCDate()}`;
   }
 }
