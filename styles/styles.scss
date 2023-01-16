@@ -229,8 +229,8 @@ button {
 }
 .card {
   display: grid;
-  grid-template-columns: 320px;
-  grid-template-rows: 17.6rem 18rem 9.8rem;
+  grid-template-columns: 300px;
+  grid-template-rows: 17.6rem 20rem 9.8rem;
   grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -933,11 +933,14 @@ hr {
 }
 
 @media screen and (max-width: 400px) {
+  .nav-logo-img {
+    width: 55px;
+  }
   .nav-logo {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
   .nav-logo span {
-    font-size: $body-size - 0.5rem;
+    font-size: $body-size - 0.4rem;
     left: 9rem;
   }
 
