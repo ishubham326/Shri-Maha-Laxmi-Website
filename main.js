@@ -99,7 +99,7 @@ let autoDate = true;
 const eventDate = document.getElementById("eventDate");
 
 if (autoDate) {
-  var date = new Date();
+  var sundayDate = new Date();
   var months = [
     "Jan",
     "Feb",
@@ -115,12 +115,19 @@ if (autoDate) {
     "Dec",
   ];
 
-  if (date.getDate() == 0)
+  if (sundayDate.getDay() % 7 === 0) {
     console.log(
       "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website"
     );
-  else {
-    date.setDate(date.getDate() + ((0 + 7 - date.getDay()) % 7 || 7));
-    eventDate.innerHTML = `${months[date.getMonth()]} ${date.getUTCDate()}`;
+    eventDate.innerHTML = `${
+      months[sundayDate.getMonth()]
+    } ${sundayDate.getUTCDate()}`;
+  } else {
+    sundayDate.setDate(
+      sundayDate.getDate() + ((0 + 7 - sundayDate.getDay()) % 7 || 7)
+    );
+    eventDate.innerHTML = `${
+      months[sundayDate.getMonth()]
+    } ${sundayDate.getUTCDate()}`;
   }
 }
