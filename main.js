@@ -95,39 +95,39 @@ function search() {
 }
 
 /*=============== SUNDAY KIRTAN ===============*/
-let autoDate = true;
-const eventDate = document.getElementById("eventDate");
+// let autoDate = true;
+// const eventDate = document.getElementById("eventDate");
 
-if (autoDate) {
-  var sundayDate = new Date();
-  var months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+// if (autoDate) {
+//   var sundayDate = new Date();
+//   var months = [
+//     "Jan",
+//     "Feb",
+//     "Mar",
+//     "Apr",
+//     "May",
+//     "Jun",
+//     "Jul",
+//     "Aug",
+//     "Sep",
+//     "Oct",
+//     "Nov",
+//     "Dec",
+//   ];
 
-  if (sundayDate.getDay() % 7 === 0) {
-    console.log(
-      "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website"
-    );
-    eventDate.innerHTML = `${
-      months[sundayDate.getMonth()]
-    } ${sundayDate.getUTCDate()}`;
-  } else {
-    sundayDate.setDate(
-      sundayDate.getDate() + ((0 + 7 - sundayDate.getDay()) % 7 || 7)
-    );
-    eventDate.innerHTML = `${
-      months[sundayDate.getMonth()]
-    } ${sundayDate.getUTCDate()}`;
-  }
-}
+//   if (sundayDate.getDay() % 7 === 0) {
+//     console.log(
+//       "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website"
+//     );
+//     eventDate.innerHTML = `${
+//       months[sundayDate.getMonth()]
+//     } ${sundayDate.getUTCDate()}`;
+//   } else {
+//     sundayDate.setDate(
+//       sundayDate.getDate() + ((0 + 7 - sundayDate.getDay()) % 7 || 7)
+//     );
+//     eventDate.innerHTML = `${
+//       months[sundayDate.getMonth()]
+//     } ${sundayDate.getUTCDate()}`;
+//   }
+// }
