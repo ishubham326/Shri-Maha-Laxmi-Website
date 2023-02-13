@@ -229,8 +229,8 @@ button {
 }
 .card {
   display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 17.6rem 20rem 9.8rem;
+  grid-template-columns: 320px;
+  grid-template-rows: 17.6rem 28rem 9.8rem;
   grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -243,7 +243,7 @@ button {
 
 .card-image {
   grid-area: image;
-  background: url("/Desktop/events/hanuman.jpg");
+  background: url("/Desktop/events/shiv.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
