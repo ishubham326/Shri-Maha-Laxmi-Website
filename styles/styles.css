@@ -294,8 +294,8 @@ button {
   display: grid;
   -ms-grid-columns: 300px;
       grid-template-columns: 300px;
-  -ms-grid-rows: 17.6rem 17rem 9.8rem;
-      grid-template-rows: 17.6rem 17rem 9.8rem;
+  -ms-grid-rows: 17.6rem 19rem 9.8rem;
+      grid-template-rows: 17.6rem 19rem 9.8rem;
       grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -312,7 +312,7 @@ button {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/sunday.png");
+  background: url("/Desktop/events/mata2.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
