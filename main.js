@@ -95,7 +95,7 @@ function search() {
 }
 
 /*=============== SUNDAY KIRTAN ===============*/
-let autoDate = false;
+let autoDate = true;
 const eventDate = document.getElementById("eventDate");
 
 if (autoDate) {
