@@ -243,7 +243,7 @@ button {
 
 .card-image {
   grid-area: image;
-  background: url("/Desktop/events/mata2.jpg");
+  background: url("/Desktop/events/sunday.png");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -265,11 +265,21 @@ button {
     font-size: $body-size;
   }
 }
-
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  P {
+    font-family: $font-mono;
+    font-size: 18px;
+  }
+  p:last-of-type {
+    font-weight: bold;
+  }
+}
 .card-stats {
   grid-area: stats;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
@@ -470,6 +480,7 @@ button {
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 35px 0;
   align-items: center;
   flex: 0.5 1 30rem;
   padding-top: 3rem;
@@ -504,10 +515,12 @@ button {
 input {
   font-size: $body-size;
   width: 100%;
-  border: none;
-  border-bottom: 1px solid #5c5c5c;
+  // border: none;
+  border: 1px solid #5c5c5c;
+  border-radius: 4px;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  margin-top: 10px;
   background-color: rgba(255, 255, 255, 0);
 
   &:focus {
@@ -531,10 +544,17 @@ input[type="submit"] {
     background-color: $yellow;
   }
 }
-
+.mc-field-group label {
+  font-size: $body-size;
+}
+.mc-field-group {
+  margin-top: 10px;
+}
 #mc_embed_signup {
-  display: none;
   width: 80%;
+}
+.optionalParent {
+  margin-top: 20px;
 }
 .indicates-required {
   text-align: end;
@@ -904,8 +924,8 @@ hr {
   }
 
   #mc_embed_signup {
-    display: none;
-    width: 90%;
+    // display: none;
+    width: 100%;
   }
 
   .footer {
@@ -944,9 +964,6 @@ hr {
     left: 9rem;
   }
 
-  #mc_embed_signup {
-    display: none;
-  }
   .footer-item {
     font-size: $body-size - 0.3rem;
   }

@@ -132,3 +132,23 @@ if (autoDate) {
     } ${sundayDate.getDate()}`;
   }
 }
+// Card Image
+
+const cardImage = document.getElementById("cardImage");
+var today = new Date().toLocaleString("en-us", { weekday: "long" });
+
+if (cardImage) {
+  switch (today.toLowerCase()) {
+    case "monday":
+      cardImage.style.backgroundImage = 'url("/Desktop/events/shiv2.webp")';
+      break;
+    case "tuesday":
+      cardImage.style.backgroundImage = 'url("/Desktop/events/hanuman.jpg")';
+      break;
+    case "friday":
+      cardImage.style.backgroundImage = 'url("/Desktop/events/laxmi.jpg")';
+      break;
+    default:
+      cardImage.style.backgroundImage = 'url("/Desktop/events/sunday.png")';
+  }
+}
