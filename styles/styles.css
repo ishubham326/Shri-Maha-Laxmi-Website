@@ -338,14 +338,30 @@ button {
   font-size: 1.8rem;
 }
 
+.table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table-row P {
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.table-row p:last-of-type {
+  font-weight: bold;
+}
+
 .card-stats {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: stats;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   border-bottom-left-radius: 2.5rem;
@@ -625,6 +641,7 @@ button {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 35px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -672,10 +689,11 @@ button {
 input {
   font-size: 1.8rem;
   width: 100%;
-  border: none;
-  border-bottom: 1px solid #5c5c5c;
+  border: 1px solid #5c5c5c;
+  border-radius: 4px;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  margin-top: 10px;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -701,9 +719,20 @@ input[type="submit"]:hover {
   background-color: #f7cc20;
 }
 
+.mc-field-group label {
+  font-size: 1.8rem;
+}
+
+.mc-field-group {
+  margin-top: 10px;
+}
+
 #mc_embed_signup {
-  display: none;
   width: 80%;
+}
+
+.optionalParent {
+  margin-top: 20px;
 }
 
 .indicates-required {
@@ -1192,8 +1221,7 @@ hr {
     width: 70px;
   }
   #mc_embed_signup {
-    display: none;
-    width: 90%;
+    width: 100%;
   }
   .footer {
     height: 20rem;
@@ -1242,9 +1270,6 @@ hr {
   .nav-logo span {
     font-size: 1.4rem;
     left: 9rem;
-  }
-  #mc_embed_signup {
-    display: none;
   }
   .footer-item {
     font-size: 1.5rem;
