@@ -263,7 +263,6 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: auto;
-  width: 80%;
   z-index: 5;
 }
 
@@ -290,12 +289,13 @@ button {
 }
 
 .card {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px;
-      grid-template-columns: 300px;
-  -ms-grid-rows: 17.6rem 19rem 9.8rem;
-      grid-template-rows: 17.6rem 19rem 9.8rem;
+  -ms-grid-columns: 325px;
+      grid-template-columns: 325px;
+  -ms-grid-rows: 17.6rem 20rem 9.8rem;
+      grid-template-rows: 17.6rem 20rem 9.8rem;
       grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -1075,6 +1075,9 @@ hr {
   .service-content {
     margin: 1.5rem 5rem;
   }
+  .event-cards {
+    margin: 0 1.5rem;
+  }
   .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1270,6 +1273,10 @@ hr {
   .nav-logo span {
     font-size: 1.4rem;
     left: 9rem;
+  }
+  .card {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
   }
   .footer-item {
     font-size: 1.5rem;
