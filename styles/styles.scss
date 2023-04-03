@@ -214,7 +214,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  gap: 5rem;
   margin: auto;
   z-index: 5;
 }
@@ -241,14 +241,16 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-.card-image {
+.card-image,
+.card-image-alt {
   grid-area: image;
-  background: url("/Desktop/events/sunday.png");
+  background: url("/Desktop/events/hanuman.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
   background-position: center;
 }
+
 .card-text {
   grid-area: text;
   margin: 1.5rem;
@@ -275,6 +277,9 @@ button {
   p:last-of-type {
     font-weight: bold;
   }
+}
+.card-stats-alt {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .card-stats {
   grid-area: stats;
@@ -831,6 +836,8 @@ hr {
   }
   .event-cards {
     margin: 0 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
   }
   .about {
     flex-direction: column;

@@ -145,6 +145,8 @@ if (cardImage) {
     case "tuesday":
       cardImage.style.backgroundImage = 'url("/Desktop/events/hanuman.jpg")';
       break;
+    case "wednesday":
+    case "thursday":
     case "friday":
       cardImage.style.backgroundImage = 'url("/Desktop/events/laxmi.jpg")';
       break;
