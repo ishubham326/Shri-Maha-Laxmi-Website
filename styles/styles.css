@@ -312,7 +312,7 @@ button {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/hanuman.jpg");
+  background: url("/Desktop/events/hanuman2.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -334,7 +334,7 @@ button {
 
 .card-text p {
   color: #2a2a34;
-  font-family: "Open Sans", sans-serif;
+  font-family: monospace;
   font-size: 1.8rem;
 }
 
@@ -857,6 +857,11 @@ footer {
 .page-404 h2,
 .text-404 h2 {
   font-size: 10rem;
+}
+
+.page-404 a,
+.text-404 a {
+  margin-top: 1.5rem;
 }
 
 .text-thankyou {

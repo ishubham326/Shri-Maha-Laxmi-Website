@@ -244,7 +244,7 @@ button {
 .card-image,
 .card-image-alt {
   grid-area: image;
-  background: url("/Desktop/events/hanuman.jpg");
+  background: url("/Desktop/events/hanuman2.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -263,7 +263,7 @@ button {
   }
   p {
     color: $body-color;
-    font-family: $body-font;
+    font-family: $font-mono;
     font-size: $body-size;
   }
 }
@@ -647,6 +647,9 @@ footer {
 
   h2 {
     font-size: 10rem;
+  }
+  a {
+    margin-top: 1.5rem;
   }
 }
 .text-thankyou {
