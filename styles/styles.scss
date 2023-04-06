@@ -496,7 +496,7 @@ button {
 .social {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  // justify-content: center;
   text-align: justify;
   width: 80%;
   &:last-child {
@@ -933,9 +933,9 @@ hr {
   #badge {
     background-color: rgb(231, 20, 20);
     position: absolute;
-    top: 55px;
+    top: 58px;
     font-size: 2rem;
-    left: 120px;
+    left: 150px;
     width: 20px;
     height: 20px;
     text-align: center;

@@ -667,9 +667,6 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: justify;
   width: 80%;
 }
@@ -1242,9 +1239,9 @@ hr {
   #badge {
     background-color: #e71414;
     position: absolute;
-    top: 55px;
+    top: 58px;
     font-size: 2rem;
-    left: 120px;
+    left: 150px;
     width: 20px;
     height: 20px;
     text-align: center;
