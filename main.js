@@ -143,7 +143,7 @@ if (cardImage) {
       cardImage.style.backgroundImage = 'url("/Desktop/events/shiv2.webp")';
       break;
     case "tuesday":
-      cardImage.style.backgroundImage = 'url("/Desktop/events/hanuman.jpg")';
+      cardImage.style.backgroundImage = 'url("/Desktop/events/hanuman2.jpg")';
       break;
     case "wednesday":
     case "thursday":
@@ -152,5 +152,41 @@ if (cardImage) {
       break;
     default:
       cardImage.style.backgroundImage = 'url("/Desktop/events/sunday.png")';
+  }
+}
+
+// Image Gallery
+const imageGallery = document.getElementById("imageGallery");
+let imgs = [
+  "radhaKrishn.jpg",
+  "laxmi.jpg",
+  "shivParvati.jpg",
+  "ganesh.jpg",
+  "shivling.jpg",
+  "hanuman.jpg",
+  "durga.jpg",
+  "kargan.jpg",
+  "laxmiNarayan.jpg",
+  "gopal.jpg",
+  "narayanlaxmi.jpg",
+  "nav.jpg",
+  "shani.jpg",
+  "ramDarbar.jpg",
+  "sai.jpg",
+  "saraswati.jpg",
+  "shiv2.jpg",
+  "surya.jpg",
+  "balak.jpg",
+  "left1.jpg",
+  "right1.jpg",
+  "left.jpg",
+  "right.jpg",
+];
+if (imageGallery) {
+  for (i = 0; i < imgs.length; i++) {
+    imageGallery.innerHTML +=
+      "<img src='/Desktop/murtis/" +
+      imgs[i] +
+      "' class='images' loading='lazy' />";
   }
 }
