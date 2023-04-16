@@ -1019,6 +1019,15 @@ hr {
 }
 
 /*---------------Gallery Page----------------*/
+#gallery {
+  width: 100%;
+}
+
+.imageGalleryHead {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+
 #imageGallery {
   width: 100%;
   display: -ms-grid;
@@ -1032,7 +1041,7 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   overflow-x: hidden;
 }
 
@@ -1360,10 +1369,13 @@ hr {
     font-size: 1.5rem;
   }
   /*---------------Gallery Page----------------*/
+  .imageGalleryHead {
+    padding: 10px 10px 0 10px;
+  }
   #imageGallery {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
   }
 }
 

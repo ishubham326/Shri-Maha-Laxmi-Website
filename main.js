@@ -187,6 +187,6 @@ if (imageGallery) {
     imageGallery.innerHTML +=
       "<img src='/Desktop/murtis/" +
       imgs[i] +
-      "' class='images' loading='lazy' />";
+      "' class='images' loading='lazy' draggable='false'/>";
   }
 }
