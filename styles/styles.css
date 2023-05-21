@@ -293,8 +293,8 @@ button {
   display: grid;
   -ms-grid-columns: 325px;
       grid-template-columns: 325px;
-  -ms-grid-rows: 17.6rem 20rem 9.8rem;
-      grid-template-rows: 17.6rem 20rem 9.8rem;
+  -ms-grid-rows: 17.6rem 16rem 9.8rem;
+      grid-template-rows: 17.6rem 16rem 9.8rem;
       grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -312,7 +312,7 @@ button {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
-  background: url("/Desktop/events/hanuman2.jpg");
+  background: url("/Desktop/events/ram.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -1371,6 +1371,10 @@ hr {
   /*---------------Gallery Page----------------*/
   .imageGalleryHead {
     padding: 10px 10px 0 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transform: scale(20);
+            transform: scale(20);
   }
   #imageGallery {
     -ms-grid-columns: (1fr)[1];

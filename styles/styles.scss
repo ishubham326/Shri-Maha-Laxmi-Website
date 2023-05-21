@@ -230,7 +230,7 @@ button {
   width: 100%;
   display: grid;
   grid-template-columns: 325px;
-  grid-template-rows: 17.6rem 20rem 9.8rem;
+  grid-template-rows: 17.6rem 16rem 9.8rem;
   grid-template-areas: "image" "text" "stats";
   font-family: "Open Sans";
   border-radius: 2.7rem;
@@ -244,7 +244,7 @@ button {
 .card-image,
 .card-image-alt {
   grid-area: image;
-  background: url("/Desktop/events/hanuman2.jpg");
+  background: url("/Desktop/events/ram.jpg");
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-size: cover;
@@ -1036,6 +1036,8 @@ hr {
   /*---------------Gallery Page----------------*/
   .imageGalleryHead {
     padding: 10px 10px 0 10px;
+    object-fit: cover;
+    transform: scale(20);
   }
   #imageGallery {
     grid-template-columns: repeat(1, 1fr);
