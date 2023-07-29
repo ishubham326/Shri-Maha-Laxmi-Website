@@ -1024,7 +1024,7 @@ hr {
 }
 
 .imageGalleryHead {
-  width: 100%;
+  max-width: 100%;
   padding: 20px 20px 0 20px;
 }
 
@@ -1371,10 +1371,6 @@ hr {
   /*---------------Gallery Page----------------*/
   .imageGalleryHead {
     padding: 10px 10px 0 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -webkit-transform: scale(20);
-            transform: scale(20);
   }
   #imageGallery {
     -ms-grid-columns: (1fr)[1];

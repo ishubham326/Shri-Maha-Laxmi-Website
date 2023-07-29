@@ -759,7 +759,7 @@ hr {
   width: 100%;
 }
 .imageGalleryHead {
-  width: 100%;
+  max-width: 100%;
   padding: 20px 20px 0 20px;
 }
 #imageGallery {
@@ -1036,8 +1036,6 @@ hr {
   /*---------------Gallery Page----------------*/
   .imageGalleryHead {
     padding: 10px 10px 0 10px;
-    object-fit: cover;
-    transform: scale(20);
   }
   #imageGallery {
     grid-template-columns: repeat(1, 1fr);
