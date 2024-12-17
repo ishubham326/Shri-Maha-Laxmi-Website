@@ -139,12 +139,12 @@ var today = new Date().toLocaleString("en-us", { weekday: "long" });
 
 if (cardImage) {
   switch (today.toLowerCase()) {
+    case "saturday":
+    case "sunday":
     case "monday":
       cardImage.style.backgroundImage = 'url("/Desktop/events/shiv2.webp")';
       break;
     case "tuesday":
-      cardImage.style.backgroundImage = 'url("/Desktop/events/hanuman2.jpg")';
-      break;
     case "wednesday":
     case "thursday":
     case "friday":
