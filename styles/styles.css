@@ -500,9 +500,6 @@ button {
   text-align: justify;
   width: 80%;
 }
-.social:last-child {
-  margin-top: 6rem;
-}
 .social img {
   width: 70px;
   padding-right: 2rem;
@@ -820,7 +817,7 @@ hr {
   }
   .nav-logo span {
     font-size: 16px;
-    left: 109px;
+    left: 90px;
   }
   .nav-menu {
     position: fixed;
@@ -1020,7 +1017,7 @@ hr {
   }
   .nav-logo span {
     font-size: 15px;
-    left: 9rem;
+    left: 80px;
   }
   .card {
     grid-template-columns: auto;

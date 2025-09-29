@@ -502,9 +502,9 @@ button {
   // justify-content: center;
   text-align: justify;
   width: 80%;
-  &:last-child {
-    margin-top: 6rem;
-  }
+  // &:last-child {
+  //   margin-top: 6rem;
+  // }
 
   img {
     width: 70px;
@@ -811,7 +811,7 @@ hr {
   }
   .nav-logo span {
     font-size: $body-size - 2px;
-    left: 109px;
+    left: 90px;
   }
   .nav-menu {
     position: fixed;
@@ -1028,7 +1028,7 @@ hr {
   }
   .nav-logo span {
     font-size: $body-size - 3px;
-    left: 9rem;
+    left: 80px;
   }
   .card {
     grid-template-columns: auto;
