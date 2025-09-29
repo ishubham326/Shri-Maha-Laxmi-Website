@@ -476,10 +476,10 @@ button {
   z-index: -1;
   flex: 0.5 0.5 20rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
   img {
-    max-width: 65vw;
+    max-width: 50%;
   }
 }
 
