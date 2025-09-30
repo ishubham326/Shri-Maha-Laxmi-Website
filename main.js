@@ -1,3 +1,36 @@
+// Past Events Modal (Image Expand)
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('image-modal-img');
+  const modalClose = document.getElementById('image-modal-close');
+  // Delegate click for all images in all grids
+  document.querySelectorAll('.past-events-grid img').forEach(img => {
+    img.addEventListener('click', function () {
+      modal.classList.add('open');
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+  // Close modal on X click
+  modalClose.addEventListener('click', function () {
+    modal.classList.remove('open');
+    modalImg.src = '';
+  });
+  // Close modal on outside click
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      modalImg.src = '';
+    }
+  });
+  // Optional: close on ESC key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+      modalImg.src = '';
+    }
+  });
+});
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
