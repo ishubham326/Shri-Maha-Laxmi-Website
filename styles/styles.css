@@ -217,6 +217,7 @@ button {
   gap: 5rem;
   margin: auto;
   z-index: 5;
+  padding: 30px 0;
 }
 
 @keyframes spin {
@@ -240,6 +241,17 @@ button {
   text-align: center;
   margin: 1rem 0rem;
   transition: 0.3s ease-in-out;
+}
+
+.image-card-event {
+  max-width: 400px;
+}
+.image-card-event img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
 }
 
 .card-image,
