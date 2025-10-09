@@ -467,7 +467,8 @@ button {
 }
 
 /*---------------Connet With Us---------------*/
-.connect-everything {
+.connect-everything,
+.connect-everything-page {
   display: flex;
   justify-content: center;
   margin: 3rem 15rem;
@@ -495,7 +496,8 @@ button {
   display: none;
 }
 
-.connect-right-content {
+.connect-right-content,
+.connect-right-content-desktop {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -959,7 +961,8 @@ hr {
     margin: 2rem 0;
   }
   /*---------------Connet With Us---------------*/
-  .connect-everything {
+  .connect-everything,
+  .connect-everything-page {
     flex-wrap: wrap;
     flex-direction: column-reverse;
     margin: 3rem 3rem;
@@ -969,8 +972,8 @@ hr {
     max-width: 80vw;
     margin-top: 3rem;
   }
-  .connect-right-content,
-  .connect-everything {
+  .connect-right-content-desktop,
+  .connect-everything-page {
     display: none;
   }
   .connect-right-content-mobile {
