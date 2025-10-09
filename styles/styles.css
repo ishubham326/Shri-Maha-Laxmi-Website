@@ -491,6 +491,10 @@ button {
   max-width: 50%;
 }
 
+.connect-right-content-mobile {
+  display: none;
+}
+
 .connect-right-content {
   display: flex;
   position: relative;
@@ -586,6 +590,32 @@ form {
 form label {
   font-weight: bold;
   font-size: 2rem;
+}
+
+.social-mobile {
+  font-size: 16px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  color: white;
+  gap: 0px 10px;
+  width: 100%;
+  max-width: 350px;
+}
+.social-mobile i {
+  font-size: 36px;
+}
+
+.whats-app-button-link {
+  background-color: #128c7e;
+}
+
+.instagram-button-link {
+  background-color: #d62976;
+}
+
+.fb-button-link {
+  background-color: #29487d;
 }
 
 /*---------------Footer----------------*/
@@ -939,6 +969,21 @@ hr {
     max-width: 80vw;
     margin-top: 3rem;
   }
+  .connect-right-content,
+  .connect-everything {
+    display: none;
+  }
+  .connect-right-content-mobile {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px 0;
+    align-items: center;
+    flex: 0.5 1 30rem;
+    padding: 3rem 1.5rem;
+    min-height: 50vh;
+  }
   #bubble {
     display: block;
     position: relative;
@@ -1046,6 +1091,10 @@ hr {
     padding: 0px 10px 10px 10px;
   }
 }
+.social-desktop {
+  display: none;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0%);

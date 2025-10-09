@@ -1,33 +1,33 @@
 // Past Events Modal (Image Expand)
-document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.getElementById('image-modal');
-  const modalImg = document.getElementById('image-modal-img');
-  const modalClose = document.getElementById('image-modal-close');
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("image-modal-img");
+  const modalClose = document.getElementById("image-modal-close");
   // Delegate click for all images in all grids
-  document.querySelectorAll('.past-events-grid img').forEach(img => {
-    img.addEventListener('click', function () {
-      modal.classList.add('open');
+  document.querySelectorAll(".past-events-grid img").forEach((img) => {
+    img.addEventListener("click", function () {
+      modal.classList.add("open");
       modalImg.src = this.src;
       modalImg.alt = this.alt;
     });
   });
   // Close modal on X click
-  modalClose.addEventListener('click', function () {
-    modal.classList.remove('open');
-    modalImg.src = '';
+  modalClose.addEventListener("click", function () {
+    modal.classList.remove("open");
+    modalImg.src = "";
   });
   // Close modal on outside click
-  modal.addEventListener('click', function (e) {
+  modal.addEventListener("click", function (e) {
     if (e.target === modal) {
-      modal.classList.remove('open');
-      modalImg.src = '';
+      modal.classList.remove("open");
+      modalImg.src = "";
     }
   });
   // Optional: close on ESC key
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
-      modal.classList.remove('open');
-      modalImg.src = '';
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) {
+      modal.classList.remove("open");
+      modalImg.src = "";
     }
   });
 });
@@ -223,3 +223,29 @@ if (imageGallery) {
       "' class='images' loading='lazy' draggable='false'/>";
   }
 }
+
+// WhatsApp Link
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (
+    urlParams.has("source") &&
+    urlParams.get("source") === "cf18f94b-9005-4a98-bce0-413fd7931a0f"
+  ) {
+    const waBtn = document.querySelector(".whats-app-button-link");
+    const desktopwaBtn = document.querySelector(
+      ".whats-app-button-link-desktop"
+    );
+    const desktopwaBtn2 = document.querySelector(
+      ".whats-app-button-link-desktop-2"
+    );
+    if (waBtn) {
+      waBtn.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
+    }
+    if (desktopwaBtn) {
+      desktopwaBtn.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
+    }
+    if (desktopwaBtn2) {
+      desktopwaBtn2.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
+    }
+  }
+});
