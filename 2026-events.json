@@ -2,8 +2,8 @@
   "January": [
     { "date": 2, "event": "Purnima Vrat", "important": false },
     { "date": 13, "event": "Shattila Ekadashi", "important": false },
-    { "date": 13, "event": "Lohri, Makar Sankranti", "important": true },
-    { "date": 14, "event": "Pongal", "important": false },
+    { "date": 13, "event": "Lohri", "important": true },
+    { "date": 14, "event": "Pongal, Makar Sankranti", "important": false },
     { "date": 23, "event": "Vasant Panchami", "important": false },
     { "date": 23, "event": "Saraswati Puja", "important": false },
     { "date": 28, "event": "Jaya Ekadashi", "important": false }
@@ -17,8 +17,9 @@
   ],
   "March": [
     { "date": 2, "event": "Purnima Vrat", "important": false },
-    { "date": 2, "event": "Holika Dahan, Holi", "important": true },
+    { "date": 2, "event": "Holika Dahan", "important": true },
     { "date": 2, "event": "Holastak Ends", "important": false },
+    { "date": 3, "event": "Holi", "important": true },
     { "date": 14, "event": "Paapmochani Ekadashi", "important": false },
     { "date": 19, "event": "Chaitra Navratri Begins", "important": true },
     { "date": 25, "event": "Durga Ashtami", "important": true },
@@ -36,11 +37,11 @@
     { "date": 12, "event": "Apara Ekadashi", "important": false },
     { "date": 16, "event": "Shani Jayanti", "important": false },
     { "date": 17, "event": "Adhik Maas Begins", "important": false },
-    { "date": 26, "event": "Kamala Ekadashi", "important": false },
+    { "date": 26, "event": "Padmini Ekadashi", "important": false },
     { "date": 30, "event": "Purnima Vrat", "important": false }
   ],
   "June": [
-    { "date": 11, "event": "Kamla Ekadashi", "important": false },
+    { "date": 11, "event": "Parama Ekadashi", "important": false },
     { "date": 24, "event": "Ganaga Dashera", "important": true },
     { "date": 25, "event": "Nirjala Ekadashi", "important": false },
     { "date": 28, "event": "Purnima Vrat", "important": false }
@@ -67,8 +68,8 @@
     { "date": 18, "event": "Shri Radha Ashtami", "important": true },
     { "date": 22, "event": "Padma Ekadashi", "important": false },
     { "date": 25, "event": "Purnima Vrat", "important": false },
-    { "date": 26, "event": "Ganesha Visarjan", "important": true },
-    { "date": 27, "event": "Pitrupaksha Begins", "important": true }
+    { "date": 25, "event": "Ganesha Visarjan", "important": true },
+    { "date": 26, "event": "Pitrupaksha Begins", "important": true }
   ],
   "October": [
     { "date": 6, "event": "Indra Ekadashi", "important": false },
@@ -94,8 +95,8 @@
   ],
   "December": [
     { "date": 4, "event": "Utpanna Ekadashi", "important": false },
+    { "date": 19, "event": "Gita Jayanti", "important": true },
     { "date": 20, "event": "Mokshada Ekadashi", "important": false },
-    { "date": 20, "event": "Gita Jayanti", "important": true },
     { "date": 23, "event": "Purnima Vrat", "important": false }
   ]
 }
