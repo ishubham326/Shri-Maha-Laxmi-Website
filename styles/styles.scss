@@ -781,6 +781,7 @@ footer {
   align-items: center;
   text-align: left;
   margin-bottom: 2rem;
+  min-height: 100%;
 }
 .booking-items {
   margin: 1.5rem;
@@ -1007,8 +1008,9 @@ hr {
   #msg {
     text-align: center;
     font-size: 2.2rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 100;
   }
   #square {
@@ -1223,4 +1225,30 @@ hr {
   to {
     opacity: 1;
   }
+}
+
+/*---------------Worship Material Page----------------*/
+
+.pdf-list {
+  margin-left: 0;
+  min-height: 50vh;
+}
+
+.pdf-list ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pdf-list li {
+  margin: 1rem 0;
+  color: #530595;
+}
+
+.pdf-list a {
+  color: #530595;
+  font-weight: 600;
+}
+
+.pdf-list a:hover {
+  color: #380463;
 }
