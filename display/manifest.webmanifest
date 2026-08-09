@@ -1,0 +1,24 @@
+{
+  "name": "Shri Maha Laxmi Hall Display",
+  "short_name": "SML Display",
+  "start_url": "/display/hall.html",
+  "scope": "/display/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#170622",
+  "theme_color": "#530595",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/Desktop/Lotus-new.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

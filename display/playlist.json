@@ -1,0 +1,25 @@
+{
+  "slides": [
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/weekly-shiv.jpg",
+      "duration": 10,
+      "recurrence": {
+        "type": "weekly",
+        "days": [1]
+      }
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/2026/2026%20Shravan.jpg",
+      "duration": 10,
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-27"
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/connected26.jpg",
+      "duration": 10
+    }
+  ]
+}

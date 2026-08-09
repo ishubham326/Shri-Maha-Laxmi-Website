@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shri Maha Laxmi | Hall Display</title>
+    <meta
+      name="description"
+      content="Digital signage display for Shri Maha Laxmi Hindu Heritage Society hall monitor."
+    />
+    <meta
+      name="robots"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate"
+    />
+    <meta
+      name="googlebot"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate"
+    />
+    <meta name="theme-color" content="#530595" />
+    <link rel="icon" href="/Desktop/Lotus-new.svg" />
+    <link rel="apple-touch-icon" href="/Desktop/Lotus-new.svg" />
+    <link rel="manifest" href="/display/manifest.webmanifest" />
+    <link rel="stylesheet" href="/display/hall.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="screen-shell">
+      <div id="rotated-stage" class="rotated-stage">
+        <main class="signage-layout" aria-live="polite">
+          <header class="welcome-banner" aria-label="Welcome banner">
+            <img
+              src="/Desktop/Lotus-new.svg"
+              alt="Shri Maha Laxmi logo"
+              class="welcome-logo"
+            />
+            <p class="welcome-text">
+              Welcome to Shri Maha Laxmi Hindu Heritage Society
+            </p>
+            <p
+              class="welcome-clock"
+              id="welcome-clock"
+              aria-label="Current time"
+            >
+              --:--
+            </p>
+          </header>
+
+          <section class="poster-panel" aria-label="Temple poster slideshow">
+            <div class="poster-frame">
+              <div class="slide-layer slide-current" id="slide-current"></div>
+              <div class="slide-layer slide-next" id="slide-next"></div>
+              <div class="slide-gradient"></div>
+              <div
+                class="poster-badge"
+                id="poster-badge-current"
+                aria-live="polite"
+              ></div>
+              <div
+                class="poster-badge"
+                id="poster-badge-next"
+                aria-hidden="true"
+              ></div>
+            </div>
+          </section>
+
+          <section class="info-panel" aria-label="Temple information">
+            <article class="info-column" id="timings-card">
+              <h2 class="info-heading">Temple Information</h2>
+              <div class="info-stack">
+                <div class="tile-list" id="info-placeholder">
+                  <p class="info-tile">Open 8:00 AM - 8:00 PM Everyday</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-column" id="event-card">
+              <h2 class="info-heading" id="calendar-heading">Calendar</h2>
+              <div class="info-stack">
+                <div class="tile-list" id="calendar-placeholder">
+                  <p class="info-tile">1....Event 1</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-column" id="qr-card">
+              <h2 class="info-heading">Stay Connected</h2>
+              <div class="info-card qr-card">
+                <div class="qr-placeholder" id="qr-placeholder">QR</div>
+              </div>
+            </article>
+          </section>
+
+          <footer class="ticker" id="announcement-placeholder">
+            Announcements: Please maintain silence inside the mandir hall.
+          </footer>
+        </main>
+
+        <section class="closed-screen" id="closed-screen" aria-hidden="true">
+          <img
+            src="/Desktop/Lotus-new.svg"
+            alt="Temple logo"
+            class="closed-logo"
+          />
+          <h1>Mandir Closed</h1>
+          <p id="reopen-time">Reopens at 8:00 AM</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="/display/hall.js" defer></script>
+  </body>
+</html>

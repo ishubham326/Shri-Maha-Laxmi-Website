@@ -1,0 +1,24 @@
+{
+  "name": "Shri Maha Laxmi iPad Display",
+  "short_name": "SML iPad",
+  "start_url": "/display/ipad.html",
+  "scope": "/display/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07040d",
+  "theme_color": "#530595",
+  "icons": [
+    {
+      "src": "/Desktop/Lotus-new.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

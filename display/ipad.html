@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shri Maha Laxmi | iPad Display</title>
+    <meta
+      name="description"
+      content="Poster-only slideshow display for Shri Maha Laxmi Hindu Heritage Society."
+    />
+    <meta
+      name="robots"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate"
+    />
+    <meta
+      name="googlebot"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate"
+    />
+    <meta name="theme-color" content="#530595" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="SML Display" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" href="/Desktop/Lotus-new.svg" />
+    <link rel="apple-touch-icon" href="/Desktop/Lotus-new.svg" />
+    <link rel="manifest" href="/display/ipad-manifest.webmanifest" />
+    <link rel="stylesheet" href="/display/ipad.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="ipad-stage" aria-live="polite">
+      <div class="slide-layer slide-current" id="slide-current"></div>
+      <div class="slide-layer slide-next" id="slide-next"></div>
+    </main>
+
+    <section class="closed-screen" id="closed-screen" aria-hidden="true">
+      <img src="/Desktop/Lotus-new.svg" alt="Temple logo" class="closed-logo" />
+      <h1>Mandir Closed</h1>
+      <p id="reopen-time">Reopens at 8:00 AM</p>
+    </section>
+
+    <script src="/display/ipad.js" defer></script>
+  </body>
+</html>

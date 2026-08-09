@@ -1,0 +1,38 @@
+{
+  "displayStart": "08:00",
+  "displayEnd": "1:00",
+  "rotationDeg": 90,
+  "transitionDurationMs": 1400,
+  "playlistRefreshMs": 300000,
+  "scheduleCheckMs": 30000,
+  "playlistPath": "/display/playlist.json",
+  "calendarPath": "/2026-events.json",
+  "calendarYear": 2026,
+  "calendarMaxItems": 7,
+  "qr": {
+    "connectPath": "/connect-with-us.html",
+    "channelParamName": "channel",
+    "channelParamValue": "whatsapp",
+    "whatsappParamName": "wa",
+    "whatsappJoinUrl": "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw",
+    "qrPixelSize": 360
+  },
+  "placeholders": {
+    "info": [
+      "Hours:\n8:00 AM - 8:00 PM Everyday",
+      "Aarti:\n7:00 PM Everyday",
+      "E-transfer Donation Email:\n donate@laxmimandir.com",
+      "2026 Calendar:\nlaxmimandir.com/2026-calendar"
+    ],
+    "calendar": ["1....Event 1", "2....Event 2"],
+    "qrLabel": "QR",
+    "qrCaption": "Scan for",
+    "qrPlatformsLabel": "WhatsApp • Instagram • Facebook",
+    "announcement": "Acharya Shukla: 905-531-6985 | 370 Highway 8, Stoney Creek, ON Canada L8G1E9 | laxmimandir.com\nPlease maintain silence inside the mandir hall. Please do not touch the murtis."
+  },
+  "theme": {
+    "primary": "#530595",
+    "accent": "#f7cc20",
+    "background": "#170622"
+  }
+}
