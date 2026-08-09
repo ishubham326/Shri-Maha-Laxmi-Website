@@ -1,6 +1,6 @@
 {
   "displayStart": "08:00",
-  "displayEnd": "1:00",
+  "displayEnd": "20:00",
   "rotationDeg": 90,
   "transitionDurationMs": 1400,
   "playlistRefreshMs": 300000,

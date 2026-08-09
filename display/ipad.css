@@ -56,11 +56,7 @@ body {
   place-content: center;
   text-align: center;
   gap: 1.6vh;
-  background: radial-gradient(
-    circle at center,
-    #0f1118 0%,
-    var(--color-closed-bg) 74%
-  );
+  background: radial-gradient(circle at center, #0f1118 0%, var(--color-closed-bg) 74%);
   color: #ececf0;
 }
 
@@ -90,4 +86,4 @@ body {
 .is-closed .ipad-stage {
   filter: brightness(0.08);
   transition: filter 1.2s ease;
-}
+}/*# sourceMappingURL=ipad.css.map */
