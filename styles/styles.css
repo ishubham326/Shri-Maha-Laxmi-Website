@@ -620,6 +620,10 @@ form label {
   background-color: #29487d;
 }
 
+.review-button-link {
+  background-color: #0f9d58;
+}
+
 /*---------------Footer----------------*/
 footer {
   background-color: #530595;
