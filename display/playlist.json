@@ -18,6 +18,12 @@
     },
     {
       "type": "image",
+      "image": "/Desktop/past-events/2026/raksha26.jpg",
+      "duration": 10,
+      "endDate": "2026-08-27"
+    },
+    {
+      "type": "image",
       "image": "/Desktop/past-events/connected26.jpg",
       "duration": 10
     }
