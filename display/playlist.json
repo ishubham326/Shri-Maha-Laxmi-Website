@@ -2,6 +2,12 @@
   "slides": [
     {
       "type": "image",
+      "image": "/Desktop/past-events/2026/eclipse2026.jpg",
+      "duration": 10,
+      "endDate": "2026-08-12"
+    },
+    {
+      "type": "image",
       "image": "/Desktop/past-events/weekly-shiv.jpg",
       "duration": 10,
       "recurrence": {
