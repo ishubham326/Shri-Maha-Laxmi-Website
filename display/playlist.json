@@ -3,13 +3,31 @@
     {
       "type": "image",
       "image": "/Desktop/past-events/2026/eclipse2026.jpg",
-      "duration": 10,
+      "duration": 6,
       "endDate": "2026-08-12"
     },
     {
       "type": "image",
+      "image": "/Desktop/past-events/2026/2026%20Shravan.jpg",
+      "duration": 6,
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-27"
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/2026/raksha26.jpg",
+      "duration": 4,
+      "endDate": "2026-08-27"
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/connected26.jpg",
+      "duration": 4
+    },
+    {
+      "type": "image",
       "image": "/Desktop/past-events/weekly-shiv.jpg",
-      "duration": 10,
+      "duration": 4,
       "recurrence": {
         "type": "weekly",
         "days": [1]
@@ -17,21 +35,8 @@
     },
     {
       "type": "image",
-      "image": "/Desktop/past-events/2026/2026%20Shravan.jpg",
-      "duration": 10,
-      "startDate": "2026-07-30",
-      "endDate": "2026-08-27"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/raksha26.jpg",
-      "duration": 10,
-      "endDate": "2026-08-27"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/connected26.jpg",
-      "duration": 10
+      "image": "/Desktop/past-events/supplies.jpg",
+      "duration": 6
     }
   ]
 }
