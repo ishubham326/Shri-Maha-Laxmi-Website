@@ -22,7 +22,12 @@ body {
   height: 100%;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
-  background: radial-gradient(circle at 20% 18%, #351343 0%, #13061d 60%, #09040f 100%);
+  background: radial-gradient(
+    circle at 20% 18%,
+    #351343 0%,
+    #13061d 60%,
+    #09040f 100%
+  );
   color: var(--color-text);
 }
 
@@ -107,7 +112,11 @@ body {
   z-index: 2;
   border: 0.35vh solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 2.6vh 5.8vh rgba(0, 0, 0, 0.35);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
 }
 
 .slide-layer {
@@ -129,7 +138,12 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to top, rgba(6, 4, 10, 0.36) 0%, rgba(6, 4, 10, 0.1) 38%, rgba(6, 4, 10, 0) 65%);
+  background: linear-gradient(
+    to top,
+    rgba(6, 4, 10, 0.36) 0%,
+    rgba(6, 4, 10, 0.1) 38%,
+    rgba(6, 4, 10, 0) 65%
+  );
 }
 
 .poster-badge {
@@ -160,23 +174,43 @@ body {
 }
 
 .poster-badge.badge-upcoming {
-  background: linear-gradient(to top, rgba(46, 76, 141, 0.95) 0%, rgba(67, 102, 181, 0.86) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(46, 76, 141, 0.95) 0%,
+    rgba(67, 102, 181, 0.86) 100%
+  );
 }
 
 .poster-badge.badge-today {
-  background: linear-gradient(to top, rgba(33, 115, 72, 0.96) 0%, rgba(50, 151, 98, 0.88) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(33, 115, 72, 0.96) 0%,
+    rgba(50, 151, 98, 0.88) 100%
+  );
 }
 
 .poster-badge.badge-past {
-  background: linear-gradient(to top, rgba(89, 52, 56, 0.95) 0%, rgba(122, 73, 78, 0.88) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(89, 52, 56, 0.95) 0%,
+    rgba(122, 73, 78, 0.88) 100%
+  );
 }
 
 .poster-badge.badge-recurring {
-  background: linear-gradient(to top, rgba(58, 67, 147, 0.95) 0%, rgba(83, 92, 183, 0.87) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(58, 67, 147, 0.95) 0%,
+    rgba(83, 92, 183, 0.87) 100%
+  );
 }
 
 .poster-badge.badge-recurring-today {
-  background: linear-gradient(to top, rgba(25, 120, 85, 0.96) 0%, rgba(39, 146, 105, 0.9) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(25, 120, 85, 0.96) 0%,
+    rgba(39, 146, 105, 0.9) 100%
+  );
 }
 
 .info-panel {
@@ -298,7 +332,7 @@ body {
   aspect-ratio: 1/1;
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .qr-caption {
@@ -344,7 +378,11 @@ body {
   place-content: center;
   text-align: center;
   gap: 1.6vh;
-  background: radial-gradient(circle at center, #0f1118 0%, var(--color-closed-bg) 74%);
+  background: radial-gradient(
+    circle at center,
+    #0f1118 0%,
+    var(--color-closed-bg) 74%
+  );
   color: #ececf0;
 }
 
@@ -371,6 +409,12 @@ body {
   color: #d9d9df;
 }
 
+#closed-now {
+  font-size: 2.05vh;
+  color: #f0f0f4;
+  letter-spacing: 0.02em;
+}
+
 .is-closed .signage-layout {
   filter: brightness(0.08);
   transition: filter 1.2s ease;
@@ -395,4 +439,4 @@ body {
   .info-tile {
     font-size: 1.85vh;
   }
-}/*# sourceMappingURL=hall.css.map */
+} /*# sourceMappingURL=hall.css.map */

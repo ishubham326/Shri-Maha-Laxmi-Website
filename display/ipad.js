@@ -7,12 +7,12 @@
     transitionDurationMs: 1400,
     playlistRefreshMs: 5 * 60 * 1000,
     scheduleCheckMs: 30 * 1000,
-    playlistPath: "/display/playlist.json"
+    playlistPath: "/display/playlist.json",
   };
 
   const STORAGE_KEYS = {
     config: "sml-ipad-config",
-    playlist: "sml-ipad-playlist"
+    playlist: "sml-ipad-playlist",
   };
 
   const dom = {
@@ -20,7 +20,8 @@
     current: document.getElementById("slide-current"),
     next: document.getElementById("slide-next"),
     closedScreen: document.getElementById("closed-screen"),
-    reopenTime: document.getElementById("reopen-time")
+    reopenTime: document.getElementById("reopen-time"),
+    closedNow: document.getElementById("closed-now"),
   };
 
   class ConfigService {
@@ -45,7 +46,9 @@
 
     async fetchNetwork() {
       try {
-        const response = await fetch(`${this.path}?t=${Date.now()}`, { cache: "no-store" });
+        const response = await fetch(`${this.path}?t=${Date.now()}`, {
+          cache: "no-store",
+        });
         if (!response.ok) {
           return null;
         }
@@ -92,7 +95,9 @@
 
     async fetchPlaylist() {
       try {
-        const response = await fetch(`${this.path}?t=${Date.now()}`, { cache: "no-store" });
+        const response = await fetch(`${this.path}?t=${Date.now()}`, {
+          cache: "no-store",
+        });
         if (!response.ok) {
           throw new Error(`Playlist HTTP error: ${response.status}`);
         }
@@ -109,7 +114,10 @@
 
     saveLocal(slides, signature) {
       try {
-        localStorage.setItem(STORAGE_KEYS.playlist, JSON.stringify({ slides, signature }));
+        localStorage.setItem(
+          STORAGE_KEYS.playlist,
+          JSON.stringify({ slides, signature }),
+        );
       } catch {
         // Intentionally ignored.
       }
@@ -146,11 +154,15 @@
 
     setTransitionDuration(ms) {
       this.transitionDurationMs = ms;
-      document.documentElement.style.setProperty("--transition-fade-ms", String(ms));
+      document.documentElement.style.setProperty(
+        "--transition-fade-ms",
+        String(ms),
+      );
     }
 
     setSlides(slides) {
-      const previousImage = this.currentIndex >= 0 ? this.slides[this.currentIndex].image : null;
+      const previousImage =
+        this.currentIndex >= 0 ? this.slides[this.currentIndex].image : null;
       this.slides = [...slides];
 
       if (!this.slides.length) {
@@ -160,7 +172,9 @@
       }
 
       if (previousImage) {
-        const matchIndex = this.slides.findIndex((item) => item.image === previousImage);
+        const matchIndex = this.slides.findIndex(
+          (item) => item.image === previousImage,
+        );
         this.currentIndex = matchIndex >= 0 ? matchIndex : 0;
       } else {
         this.currentIndex = 0;
@@ -242,7 +256,9 @@
         return;
       }
 
-      this.currentEl.style.backgroundImage = asBg(this.slides[this.currentIndex].image);
+      this.currentEl.style.backgroundImage = asBg(
+        this.slides[this.currentIndex].image,
+      );
       this.currentEl.style.opacity = "1";
       this.nextEl.style.opacity = "0";
     }
@@ -253,7 +269,10 @@
         return;
       }
 
-      const duration = Math.max(3000, Math.floor(this.slides[this.currentIndex].duration * 1000));
+      const duration = Math.max(
+        3000,
+        Math.floor(this.slides[this.currentIndex].duration * 1000),
+      );
       this.slideTimer = setTimeout(() => {
         this.transition().catch(() => this.scheduleNext());
       }, duration);
@@ -322,7 +341,11 @@
     }
 
     tick() {
-      const open = isWithinHours(new Date(), this.config.displayStart, this.config.displayEnd);
+      const open = isWithinHours(
+        new Date(),
+        this.config.displayStart,
+        this.config.displayEnd,
+      );
       if (open === this.lastOpenState) {
         return;
       }
@@ -334,7 +357,10 @@
         dom.closedScreen.setAttribute("aria-hidden", "true");
         this.slideshow.setClosedState(false);
       } else {
-        dom.reopenTime.textContent = `Reopens at ${formatTime(this.config.displayStart)}`;
+        dom.reopenTime.textContent = formatOpenHoursLabel(
+          this.config.displayStart,
+          this.config.displayEnd,
+        );
         dom.body.classList.add("is-closed");
         dom.closedScreen.classList.add("active");
         dom.closedScreen.setAttribute("aria-hidden", "false");
@@ -351,6 +377,7 @@
       this.slideshow = new Slideshow();
       this.scheduler = null;
       this.playlistTimer = null;
+      this.closedClockTimer = null;
       this.refreshing = false;
     }
 
@@ -366,6 +393,7 @@
 
       this.scheduler = new Scheduler(this.config, this.slideshow);
       this.scheduler.start();
+      this.startClosedClock();
 
       this.playlistTimer = setInterval(() => {
         this.refreshPlaylist().catch(() => {
@@ -385,6 +413,11 @@
           this.playlistTimer = null;
         }
 
+        if (this.closedClockTimer) {
+          clearInterval(this.closedClockTimer);
+          this.closedClockTimer = null;
+        }
+
         if (this.scheduler) {
           this.scheduler.stop();
         }
@@ -393,6 +426,23 @@
       });
 
       this.registerServiceWorker();
+    }
+
+    startClosedClock() {
+      if (!dom.closedNow) {
+        return;
+      }
+
+      if (this.closedClockTimer) {
+        clearInterval(this.closedClockTimer);
+      }
+
+      const updateClock = () => {
+        dom.closedNow.textContent = formatWelcomeTime(new Date());
+      };
+
+      updateClock();
+      this.closedClockTimer = setInterval(updateClock, 30 * 1000);
     }
 
     async refreshPlaylist() {
@@ -442,7 +492,8 @@
 
     return slides
       .map((slide) => {
-        const image = slide && typeof slide.image === "string" ? slide.image.trim() : "";
+        const image =
+          slide && typeof slide.image === "string" ? slide.image.trim() : "";
         const duration = Number(slide && slide.duration);
 
         if (!image) {
@@ -452,7 +503,7 @@
         return {
           image,
           duration: Number.isFinite(duration) && duration > 0 ? duration : 12,
-          type: slide && typeof slide.type === "string" ? slide.type : "image"
+          type: slide && typeof slide.type === "string" ? slide.type : "image",
         };
       })
       .filter((slide) => slide && slide.type === "image");
@@ -530,6 +581,25 @@
     const suffix = hour >= 12 ? "PM" : "AM";
     const h12 = hour % 12 || 12;
     return `${h12}:${String(minute).padStart(2, "0")} ${suffix}`;
+  }
+
+  function formatOpenHoursLabel(startTime24h, endTime24h) {
+    return `Open Everyday: ${formatTime(startTime24h)} to ${formatTime(endTime24h)}`;
+  }
+
+  function formatWelcomeTime(date) {
+    const timeFormatter = new Intl.DateTimeFormat(undefined, {
+      hour: "numeric",
+      minute: "2-digit",
+    });
+
+    const dateFormatter = new Intl.DateTimeFormat(undefined, {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
+
+    return `${timeFormatter.format(date)} • ${dateFormatter.format(date)}`;
   }
 
   const app = new IpadApp();

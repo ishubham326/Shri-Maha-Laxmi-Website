@@ -81,6 +81,7 @@
     slideNext: document.getElementById("slide-next"),
     closedScreen: document.getElementById("closed-screen"),
     reopenTime: document.getElementById("reopen-time"),
+    closedNow: document.getElementById("closed-now"),
     info: document.getElementById("info-placeholder"),
     calendarHeading: document.getElementById("calendar-heading"),
     calendar: document.getElementById("calendar-placeholder"),
@@ -556,8 +557,10 @@
         dom.closedScreen.setAttribute("aria-hidden", "true");
         this.slideshow.setClosedState(false);
       } else {
-        const reopenAt = formatReopenLabel(this.config.displayStart);
-        dom.reopenTime.textContent = `Reopens at ${reopenAt}`;
+        dom.reopenTime.textContent = formatOpenHoursLabel(
+          this.config.displayStart,
+          this.config.displayEnd,
+        );
         dom.app.classList.add("is-closed");
         dom.closedScreen.classList.add("active");
         dom.closedScreen.setAttribute("aria-hidden", "false");
@@ -747,7 +750,7 @@
     }
 
     startClock() {
-      if (!dom.welcomeClock) {
+      if (!dom.welcomeClock && !dom.closedNow) {
         return;
       }
 
@@ -756,7 +759,13 @@
       }
 
       const updateClock = () => {
-        dom.welcomeClock.textContent = formatWelcomeTime(new Date());
+        const formatted = formatWelcomeTime(new Date());
+        if (dom.welcomeClock) {
+          dom.welcomeClock.textContent = formatted;
+        }
+        if (dom.closedNow) {
+          dom.closedNow.textContent = formatted;
+        }
       };
 
       updateClock();
@@ -1107,7 +1116,11 @@
     return date.getTime();
   }
 
-  function formatReopenLabel(time24h) {
+  function formatOpenHoursLabel(startTime24h, endTime24h) {
+    return `Open Everyday: ${formatTimeLabel(startTime24h)} to ${formatTimeLabel(endTime24h)}`;
+  }
+
+  function formatTimeLabel(time24h) {
     const match = /^([01]\d|2[0-3]):([0-5]\d)$/.exec(time24h || "");
     if (!match) {
       return "8:00 AM";
