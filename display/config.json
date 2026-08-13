@@ -3,6 +3,7 @@
   "displayEnd": "20:00",
   "rotationDeg": 90,
   "transitionDurationMs": 1400,
+  "configRefreshMs": 120000,
   "playlistRefreshMs": 300000,
   "scheduleCheckMs": 30000,
   "playlistPath": "/display/playlist.json",

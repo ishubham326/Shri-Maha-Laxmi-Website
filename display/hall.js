@@ -6,6 +6,7 @@
     displayEnd: "20:00",
     rotationDeg: 90,
     transitionDurationMs: 1400,
+    configRefreshMs: 120000,
     playlistRefreshMs: 300000,
     scheduleCheckMs: 30000,
     playlistPath: "/display/playlist.json",
@@ -575,6 +576,7 @@
       this.configService = new ConfigService("/display/config.json");
       this.calendarService = null;
       this.playlistService = null;
+      this.configRefreshTimer = null;
       this.playlistRefreshTimer = null;
       this.clockTimer = null;
 
@@ -589,10 +591,13 @@
 
       this.scheduleController = null;
       this.isRefreshing = false;
+      this.isConfigRefreshing = false;
+      this.configSignature = "";
     }
 
     async init() {
       this.config = await this.configService.load();
+      this.configSignature = getConfigSignature(this.config);
       this.applyConfigToUi(this.config);
       this.startClock();
       this.calendarService = new CalendarService(
@@ -613,9 +618,77 @@
       );
       this.scheduleController.start();
 
+      this.startConfigRefresh();
       this.startPlaylistRefresh();
       this.attachLifecycleEvents();
       this.registerServiceWorker();
+    }
+
+    startConfigRefresh() {
+      if (this.configRefreshTimer) {
+        clearInterval(this.configRefreshTimer);
+      }
+
+      this.configRefreshTimer = setInterval(() => {
+        this.refreshConfig().catch((error) => {
+          console.warn("Config refresh failed:", error);
+        });
+      }, this.config.configRefreshMs);
+    }
+
+    async refreshConfig() {
+      if (this.isConfigRefreshing) {
+        return;
+      }
+
+      this.isConfigRefreshing = true;
+      try {
+        const nextConfig = await this.configService.load();
+        const nextSignature = getConfigSignature(nextConfig);
+        if (nextSignature === this.configSignature) {
+          return;
+        }
+
+        const prevConfig = this.config;
+        const playlistPathChanged =
+          nextConfig.playlistPath !== prevConfig.playlistPath;
+        const calendarPathChanged =
+          nextConfig.calendarPath !== prevConfig.calendarPath;
+        const calendarYearChanged =
+          Number(nextConfig.calendarYear) !== Number(prevConfig.calendarYear);
+
+        this.config = nextConfig;
+        this.configSignature = nextSignature;
+
+        this.applyConfigToUi(this.config);
+        this.startConfigRefresh();
+        this.startPlaylistRefresh();
+
+        if (playlistPathChanged || !this.playlistService) {
+          this.playlistService = new PlaylistService(this.config.playlistPath);
+          const initialPlaylist = await this.playlistService.loadInitial();
+          this.playlistService.lastSignature = initialPlaylist.signature;
+          this.slideshow.setSlides(initialPlaylist.slides);
+          await this.slideshow.start();
+        }
+
+        if (calendarPathChanged || calendarYearChanged || !this.calendarService) {
+          this.calendarService = new CalendarService(
+            this.config.calendarPath,
+            this.config.calendarYear,
+          );
+        }
+        await this.refreshCalendar();
+
+        if (this.scheduleController) {
+          this.scheduleController.config = this.config;
+          this.scheduleController.stop();
+          this.scheduleController.lastState = null;
+          this.scheduleController.start();
+        }
+      } finally {
+        this.isConfigRefreshing = false;
+      }
     }
 
     applyConfigToUi(config) {
@@ -731,6 +804,11 @@
       });
 
       window.addEventListener("beforeunload", () => {
+        if (this.configRefreshTimer) {
+          clearInterval(this.configRefreshTimer);
+          this.configRefreshTimer = null;
+        }
+
         if (this.playlistRefreshTimer) {
           clearInterval(this.playlistRefreshTimer);
           this.playlistRefreshTimer = null;
@@ -807,6 +885,14 @@
         ...(incoming.qr || {}),
       },
     };
+  }
+
+  function getConfigSignature(config) {
+    try {
+      return JSON.stringify(config || {});
+    } catch {
+      return "";
+    }
   }
 
   function normalizeSlides(slides) {

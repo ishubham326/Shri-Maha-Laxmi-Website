@@ -5,6 +5,7 @@
     displayStart: "08:00",
     displayEnd: "22:00",
     transitionDurationMs: 1400,
+    configRefreshMs: 120000,
     playlistRefreshMs: 5 * 60 * 1000,
     scheduleCheckMs: 30 * 1000,
     playlistPath: "/display/playlist.json",
@@ -376,13 +377,17 @@
       this.playlistService = null;
       this.slideshow = new Slideshow();
       this.scheduler = null;
+      this.configRefreshTimer = null;
       this.playlistTimer = null;
       this.closedClockTimer = null;
       this.refreshing = false;
+      this.configRefreshing = false;
+      this.configSignature = "";
     }
 
     async init() {
       this.config = await this.configService.load();
+      this.configSignature = getConfigSignature(this.config);
       this.slideshow.setTransitionDuration(this.config.transitionDurationMs);
 
       this.playlistService = new PlaylistService(this.config.playlistPath);
@@ -394,6 +399,7 @@
       this.scheduler = new Scheduler(this.config, this.slideshow);
       this.scheduler.start();
       this.startClosedClock();
+      this.startConfigRefresh();
 
       this.playlistTimer = setInterval(() => {
         this.refreshPlaylist().catch(() => {
@@ -408,6 +414,11 @@
       });
 
       window.addEventListener("beforeunload", () => {
+        if (this.configRefreshTimer) {
+          clearInterval(this.configRefreshTimer);
+          this.configRefreshTimer = null;
+        }
+
         if (this.playlistTimer) {
           clearInterval(this.playlistTimer);
           this.playlistTimer = null;
@@ -426,6 +437,69 @@
       });
 
       this.registerServiceWorker();
+    }
+
+    startConfigRefresh() {
+      if (this.configRefreshTimer) {
+        clearInterval(this.configRefreshTimer);
+      }
+
+      this.configRefreshTimer = setInterval(() => {
+        this.refreshConfig().catch(() => {
+          // Keep running with current config.
+        });
+      }, this.config.configRefreshMs);
+    }
+
+    async refreshConfig() {
+      if (this.configRefreshing) {
+        return;
+      }
+
+      this.configRefreshing = true;
+      try {
+        const nextConfig = await this.configService.load();
+        const nextSignature = getConfigSignature(nextConfig);
+        if (nextSignature === this.configSignature) {
+          return;
+        }
+
+        const prevConfig = this.config;
+        const playlistPathChanged =
+          nextConfig.playlistPath !== prevConfig.playlistPath;
+
+        this.config = nextConfig;
+        this.configSignature = nextSignature;
+
+        this.slideshow.setTransitionDuration(this.config.transitionDurationMs);
+        this.startConfigRefresh();
+
+        if (playlistPathChanged || !this.playlistService) {
+          this.playlistService = new PlaylistService(this.config.playlistPath);
+          const initial = await this.playlistService.loadInitial();
+          this.playlistService.lastSignature = initial.signature;
+          this.slideshow.setSlides(initial.slides);
+          await this.slideshow.start();
+        }
+
+        if (this.scheduler) {
+          this.scheduler.config = this.config;
+          this.scheduler.stop();
+          this.scheduler.lastOpenState = null;
+          this.scheduler.start();
+        }
+
+        if (this.playlistTimer) {
+          clearInterval(this.playlistTimer);
+        }
+        this.playlistTimer = setInterval(() => {
+          this.refreshPlaylist().catch(() => {
+            // Keep running with existing playlist.
+          });
+        }, this.config.playlistRefreshMs);
+      } finally {
+        this.configRefreshing = false;
+      }
     }
 
     startClosedClock() {
@@ -585,6 +659,14 @@
 
   function formatOpenHoursLabel(startTime24h, endTime24h) {
     return `Open Everyday: ${formatTime(startTime24h)} to ${formatTime(endTime24h)}`;
+  }
+
+  function getConfigSignature(config) {
+    try {
+      return JSON.stringify(config || {});
+    } catch {
+      return "";
+    }
   }
 
   function formatWelcomeTime(date) {
