@@ -2,12 +2,6 @@
   "slides": [
     {
       "type": "image",
-      "image": "/Desktop/past-events/2026/eclipse2026.jpg",
-      "duration": 6,
-      "endDate": "2026-08-12"
-    },
-    {
-      "type": "image",
       "image": "/Desktop/past-events/2026/2026%20Shravan.jpg",
       "duration": 6,
       "startDate": "2026-07-30",
