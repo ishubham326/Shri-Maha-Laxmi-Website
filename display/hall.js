@@ -14,9 +14,11 @@
     calendarYear: 2026,
     calendarMaxItems: 7,
     qr: {
-      connectPath: "/connect-with-us.html",
+      connectPath: "/connect-with-us",
       channelParamName: "channel",
       channelParamValue: "whatsapp",
+      sourceParamName: "source",
+      sourceParamValue: "cf18f94b-9005-4a98-bce0-413fd7931a0f",
       whatsappParamName: "wa",
       whatsappJoinUrl: "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw",
       qrPixelSize: 360,
@@ -672,7 +674,11 @@
           await this.slideshow.start();
         }
 
-        if (calendarPathChanged || calendarYearChanged || !this.calendarService) {
+        if (
+          calendarPathChanged ||
+          calendarYearChanged ||
+          !this.calendarService
+        ) {
           this.calendarService = new CalendarService(
             this.config.calendarPath,
             this.config.calendarYear,
@@ -1391,10 +1397,27 @@
     const connectPath =
       typeof qrConfig.connectPath === "string" && qrConfig.connectPath.trim()
         ? qrConfig.connectPath.trim()
-        : "/connect-with-us.html";
+        : "/connect-with-us";
 
     const baseOrigin = window.location.origin;
     const url = new URL(connectPath, baseOrigin);
+
+    const sourceParamName =
+      typeof qrConfig.sourceParamName === "string" &&
+      qrConfig.sourceParamName.trim()
+        ? qrConfig.sourceParamName.trim()
+        : "source";
+    const sourceParamValue =
+      typeof qrConfig.sourceParamValue === "string" &&
+      qrConfig.sourceParamValue.trim()
+        ? qrConfig.sourceParamValue.trim()
+        : "cf18f94b-9005-4a98-bce0-413fd7931a0f";
+
+    // Keep QR destination aligned with legacy Connect rewrite logic.
+    if (sourceParamValue) {
+      url.searchParams.set(sourceParamName, sourceParamValue);
+      return url.toString();
+    }
 
     const channelParamName =
       typeof qrConfig.channelParamName === "string" &&
