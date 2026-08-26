@@ -1469,6 +1469,7 @@
     const timeFormatter = new Intl.DateTimeFormat(undefined, {
       hour: "numeric",
       minute: "2-digit",
+      hour12: true,
     });
 
     const dateFormatter = new Intl.DateTimeFormat(undefined, {
