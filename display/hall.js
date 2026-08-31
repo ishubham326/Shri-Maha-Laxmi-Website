@@ -580,6 +580,7 @@
       this.playlistService = null;
       this.configRefreshTimer = null;
       this.playlistRefreshTimer = null;
+      this.calendarDateWatchTimer = null;
       this.clockTimer = null;
 
       this.slideshow = new SlideshowEngine({
@@ -595,6 +596,11 @@
       this.isRefreshing = false;
       this.isConfigRefreshing = false;
       this.configSignature = "";
+      this.lastCalendarDateKey = "";
+      this.swRegistration = null;
+      this.swUpdateCheckTimer = null;
+      this.reloadWatchTimer = null;
+      this.pendingReload = false;
     }
 
     async init() {
@@ -607,6 +613,7 @@
         this.config.calendarYear,
       );
       await this.refreshCalendar();
+      this.startCalendarDateWatch();
 
       this.playlistService = new PlaylistService(this.config.playlistPath);
       const initialPlaylist = await this.playlistService.loadInitial();
@@ -752,6 +759,8 @@
         return;
       }
 
+      this.lastCalendarDateKey = getDateKey(new Date());
+
       const items = await this.calendarService.loadUpcoming(
         this.config.calendarMaxItems,
       );
@@ -762,6 +771,23 @@
 
       renderTiles(dom.calendar, items);
       this.updateCalendarHeading();
+    }
+
+    startCalendarDateWatch() {
+      if (this.calendarDateWatchTimer) {
+        clearInterval(this.calendarDateWatchTimer);
+      }
+
+      this.calendarDateWatchTimer = setInterval(() => {
+        const todayKey = getDateKey(new Date());
+        if (todayKey === this.lastCalendarDateKey) {
+          return;
+        }
+
+        this.refreshCalendar().catch((error) => {
+          console.warn("Calendar date rollover refresh failed:", error);
+        });
+      }, 60 * 1000);
     }
 
     startPlaylistRefresh() {
@@ -820,6 +846,21 @@
           this.playlistRefreshTimer = null;
         }
 
+        if (this.calendarDateWatchTimer) {
+          clearInterval(this.calendarDateWatchTimer);
+          this.calendarDateWatchTimer = null;
+        }
+
+        if (this.swUpdateCheckTimer) {
+          clearInterval(this.swUpdateCheckTimer);
+          this.swUpdateCheckTimer = null;
+        }
+
+        if (this.reloadWatchTimer) {
+          clearInterval(this.reloadWatchTimer);
+          this.reloadWatchTimer = null;
+        }
+
         if (this.scheduleController) {
           this.scheduleController.stop();
         }
@@ -867,10 +908,61 @@
       }
 
       try {
-        await navigator.serviceWorker.register("/display/sw.js");
+        this.swRegistration =
+          await navigator.serviceWorker.register("/display/sw.js");
+
+        // A new code deploy (JS/CSS/HTML) only takes effect after this fires.
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          this.pendingReload = true;
+        });
+
+        this.startServiceWorkerUpdateChecks();
+        this.startReloadWatch();
       } catch (error) {
         console.warn("Service worker registration failed:", error);
       }
+    }
+
+    startServiceWorkerUpdateChecks() {
+      if (this.swUpdateCheckTimer) {
+        clearInterval(this.swUpdateCheckTimer);
+      }
+
+      this.swUpdateCheckTimer = setInterval(
+        () => {
+          if (!this.swRegistration) {
+            return;
+          }
+
+          this.swRegistration.update().catch((error) => {
+            console.warn("Service worker update check failed:", error);
+          });
+        },
+        30 * 60 * 1000,
+      );
+    }
+
+    startReloadWatch() {
+      if (this.reloadWatchTimer) {
+        clearInterval(this.reloadWatchTimer);
+      }
+
+      this.reloadWatchTimer = setInterval(() => {
+        if (!this.pendingReload) {
+          return;
+        }
+
+        const isOpen = isWithinDisplayWindow(
+          new Date(),
+          this.config.displayStart,
+          this.config.displayEnd,
+        );
+
+        // Only reload while closed so a code update never flashes on-screen.
+        if (!isOpen) {
+          window.location.reload();
+        }
+      }, 60 * 1000);
     }
   }
 
@@ -899,6 +991,13 @@
     } catch {
       return "";
     }
+  }
+
+  function getDateKey(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
   }
 
   function normalizeSlides(slides) {
