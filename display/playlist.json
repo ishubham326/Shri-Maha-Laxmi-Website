@@ -3,28 +3,8 @@
     {
       "type": "image",
       "image": "/Desktop/past-events/2026/2026janam.jpg",
-      "duration": 5,
-      "endDate": "2026-09-04"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/raksha26.jpg",
-      "duration": 4,
-      "endDate": "2026-08-27"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026janam.jpg",
       "duration": 6,
-      "startDate": "2026-09-03",
       "endDate": "2026-09-04"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026%20Shravan.jpg",
-      "duration": 3,
-      "startDate": "2026-07-30",
-      "endDate": "2026-08-27"
     },
     {
       "type": "image",
