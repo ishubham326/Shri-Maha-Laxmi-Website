@@ -2,9 +2,10 @@
   "slides": [
     {
       "type": "image",
-      "image": "/Desktop/past-events/2026/2026janam.jpg",
+      "image": "/Desktop/past-events/2026/2026_ganesh.jpg",
       "duration": 6,
-      "endDate": "2026-09-04"
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-26"
     },
     {
       "type": "image",
