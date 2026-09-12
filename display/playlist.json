@@ -14,7 +14,7 @@
     },
     {
       "type": "image",
-      "image": "/Desktop/past-events/weekly-shiv.jpg",
+      "image": "/Desktop/past-events/weekly_shiv_2.jpg",
       "duration": 4,
       "recurrence": {
         "type": "weekly",
