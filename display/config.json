@@ -9,7 +9,7 @@
   "playlistPath": "/display/playlist.json",
   "calendarPath": "/2026-events.json",
   "calendarYear": 2026,
-  "calendarMaxItems": 7,
+  "calendarMaxItems": 6,
   "qr": {
     "connectPath": "/connect-with-us",
     "channelParamName": "channel",
