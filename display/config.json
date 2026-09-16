@@ -1,6 +1,6 @@
 {
   "displayStart": "08:00",
-  "displayEnd": "20:00",
+  "displayEnd": "20:15",
   "rotationDeg": 90,
   "transitionDurationMs": 1400,
   "configRefreshMs": 120000,
@@ -12,12 +12,6 @@
   "calendarMaxItems": 6,
   "qr": {
     "connectPath": "/connect-with-us",
-    "channelParamName": "channel",
-    "channelParamValue": "whatsapp",
-    "sourceParamName": "source",
-    "sourceParamValue": "cf18f94b-9005-4a98-bce0-413fd7931a0f",
-    "whatsappParamName": "wa",
-    "whatsappJoinUrl": "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw",
     "qrPixelSize": 360
   },
   "placeholders": {

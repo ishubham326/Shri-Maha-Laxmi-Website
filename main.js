@@ -151,14 +151,14 @@ if (autoDate) {
 
   if (sundayDate.getDay() % 6 === 0) {
     console.log(
-      "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website"
+      "Wanna help out with this site? Feel free to start a PR on https://github.com/ishubham326/Shri-Maha-Laxmi-Website",
     );
     eventDate.innerHTML = `${
       months[sundayDate.getMonth()]
     } ${sundayDate.getUTCDate()}`;
   } else {
     sundayDate.setDate(
-      sundayDate.getDate() + ((7 - sundayDate.getDay()) % 7 || 7)
+      sundayDate.getDate() + ((7 - sundayDate.getDay()) % 7 || 7),
     );
     eventDate.innerHTML = `${
       months[sundayDate.getMonth()]
@@ -223,29 +223,3 @@ if (imageGallery) {
       "' class='images' loading='lazy' draggable='false'/>";
   }
 }
-
-// WhatsApp Link
-document.addEventListener("DOMContentLoaded", function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (
-    urlParams.has("source") &&
-    urlParams.get("source") === "cf18f94b-9005-4a98-bce0-413fd7931a0f"
-  ) {
-    const waBtn = document.querySelector(".whats-app-button-link");
-    const desktopwaBtn = document.querySelector(
-      ".whats-app-button-link-desktop"
-    );
-    const desktopwaBtn2 = document.querySelector(
-      ".whats-app-button-link-desktop-2"
-    );
-    if (waBtn) {
-      waBtn.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
-    }
-    if (desktopwaBtn) {
-      desktopwaBtn.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
-    }
-    if (desktopwaBtn2) {
-      desktopwaBtn2.href = "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw";
-    }
-  }
-});

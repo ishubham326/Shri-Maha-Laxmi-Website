@@ -15,12 +15,6 @@
     calendarMaxItems: 7,
     qr: {
       connectPath: "/connect-with-us",
-      channelParamName: "channel",
-      channelParamValue: "whatsapp",
-      sourceParamName: "source",
-      sourceParamValue: "cf18f94b-9005-4a98-bce0-413fd7931a0f",
-      whatsappParamName: "wa",
-      whatsappJoinUrl: "https://chat.whatsapp.com/KrcrKvWEe8u686as5Hkuaw",
       qrPixelSize: 360,
     },
     placeholders: {
@@ -1500,48 +1494,6 @@
 
     const baseOrigin = window.location.origin;
     const url = new URL(connectPath, baseOrigin);
-
-    const sourceParamName =
-      typeof qrConfig.sourceParamName === "string" &&
-      qrConfig.sourceParamName.trim()
-        ? qrConfig.sourceParamName.trim()
-        : "source";
-    const sourceParamValue =
-      typeof qrConfig.sourceParamValue === "string" &&
-      qrConfig.sourceParamValue.trim()
-        ? qrConfig.sourceParamValue.trim()
-        : "cf18f94b-9005-4a98-bce0-413fd7931a0f";
-
-    // Keep QR destination aligned with legacy Connect rewrite logic.
-    if (sourceParamValue) {
-      url.searchParams.set(sourceParamName, sourceParamValue);
-      return url.toString();
-    }
-
-    const channelParamName =
-      typeof qrConfig.channelParamName === "string" &&
-      qrConfig.channelParamName.trim()
-        ? qrConfig.channelParamName.trim()
-        : "channel";
-    const channelParamValue =
-      typeof qrConfig.channelParamValue === "string" &&
-      qrConfig.channelParamValue.trim()
-        ? qrConfig.channelParamValue.trim()
-        : "whatsapp";
-
-    const whatsappParamName =
-      typeof qrConfig.whatsappParamName === "string" &&
-      qrConfig.whatsappParamName.trim()
-        ? qrConfig.whatsappParamName.trim()
-        : "wa";
-    const whatsappJoinUrl =
-      typeof qrConfig.whatsappJoinUrl === "string" &&
-      qrConfig.whatsappJoinUrl.trim()
-        ? qrConfig.whatsappJoinUrl.trim()
-        : "";
-
-    url.searchParams.set(channelParamName, channelParamValue);
-    url.searchParams.set(whatsappParamName, whatsappJoinUrl);
 
     return url.toString();
   }
