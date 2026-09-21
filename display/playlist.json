@@ -7,15 +7,24 @@
       "startDate": "2026-09-14",
       "endDate": "2026-09-25"
     },
+
     {
       "type": "image",
-      "image": "/Desktop/past-events/connected26.jpg",
-      "duration": 4
+      "image": "/Desktop/past-events/2026/visarjan26.jpg",
+      "duration": 3,
+      "endDate": "2026-09-25"
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/2026/shraadh2026.jpg",
+      "duration": 6,
+      "startDate": "2026-09-26",
+      "endDate": "2026-10-10"
     },
     {
       "type": "image",
       "image": "/Desktop/past-events/weekly_shiv_2.jpg",
-      "duration": 4,
+      "duration": 3,
       "recurrence": {
         "type": "weekly",
         "days": [1]
@@ -25,6 +34,11 @@
       "type": "image",
       "image": "/Desktop/past-events/supplies.jpg",
       "duration": 6
+    },
+    {
+      "type": "image",
+      "image": "/Desktop/past-events/connected26.jpg",
+      "duration": 2
     }
   ]
 }

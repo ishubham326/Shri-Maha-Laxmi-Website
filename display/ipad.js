@@ -271,7 +271,7 @@
       }
 
       const duration = Math.max(
-        3000,
+        1,
         Math.floor(this.slides[this.currentIndex].duration * 1000),
       );
       this.slideTimer = setTimeout(() => {

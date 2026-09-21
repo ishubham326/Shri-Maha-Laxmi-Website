@@ -433,7 +433,7 @@
 
       const currentSlide = this.slides[this.currentIndex];
       const durationMs = Math.max(
-        3000,
+        1,
         Math.floor((currentSlide.duration || this.defaultDurationSec) * 1000),
       );
 
