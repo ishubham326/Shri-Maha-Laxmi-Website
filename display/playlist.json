@@ -2,20 +2,6 @@
   "slides": [
     {
       "type": "image",
-      "image": "/Desktop/past-events/2026/2026_ganesh.jpg",
-      "duration": 6,
-      "startDate": "2026-09-14",
-      "endDate": "2026-09-25"
-    },
-
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/visarjan26.jpg",
-      "duration": 3,
-      "endDate": "2026-09-25"
-    },
-    {
-      "type": "image",
       "image": "/Desktop/past-events/2026/shraadh2026.jpg",
       "duration": 6,
       "startDate": "2026-09-26",
