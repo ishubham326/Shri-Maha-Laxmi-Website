@@ -2,47 +2,9 @@
   "slides": [
     {
       "type": "image",
-      "image": "/Desktop/past-events/2026/shraadh2026.jpg",
-      "duration": 6,
-      "startDate": "2026-09-26",
-      "endDate": "2026-10-10"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_1_new.png",
-      "duration": 4,
-      "endDate": "2026-10-11"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_2.png",
-      "duration": 4,
-      "endDate": "2026-10-12"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_3.png",
-      "duration": 4,
-      "endDate": "2026-10-16"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_4.png",
-      "duration": 4,
-      "endDate": "2026-10-17"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_5.png",
-      "duration": 4,
-      "endDate": "2026-10-17"
-    },
-    {
-      "type": "image",
-      "image": "/Desktop/past-events/2026/2026_sharad_together.png",
-      "duration": 4,
-      "startDate": "2026-10-11",
-      "endDate": "2026-10-18"
+      "image": "/Desktop/past-events/2026/karwa26.png",
+      "endDate": "2026-10-28",
+      "duration": 6
     },
     {
       "type": "image",
