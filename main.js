@@ -110,20 +110,36 @@ sr.reveal(".booking-items");
 /*=============== SEARCH BAR ===============*/
 
 function search() {
-  var input, filter, li, date, i, txtValue;
+  var input,
+    filter,
+    dates,
+    date,
+    i,
+    txtValue,
+    months,
+    monthDates,
+    hasVisibleDate;
   input = document.getElementById("searchInput");
   filter = input.value.toUpperCase().trim();
-  li = document.getElementsByTagName("p");
+  dates = document.querySelectorAll(".month-rec .dates p");
 
-  // console.log(li);
-  for (i = 0; i < li.length; i++) {
-    date = li[i];
+  for (i = 0; i < dates.length; i++) {
+    date = dates[i];
     txtValue = date.textContent || date.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
+      date.style.display = "";
     } else {
-      li[i].style.display = "none";
+      date.style.display = "none";
     }
+  }
+
+  months = document.querySelectorAll(".month-rec");
+  for (i = 0; i < months.length; i++) {
+    monthDates = months[i].querySelectorAll(".dates p");
+    hasVisibleDate = Array.from(monthDates).some(
+      (monthDate) => monthDate.style.display !== "none",
+    );
+    months[i].style.display = hasVisibleDate ? "" : "none";
   }
 }
 

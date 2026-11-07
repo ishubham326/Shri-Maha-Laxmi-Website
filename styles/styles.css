@@ -768,7 +768,7 @@ footer {
 
 .dates {
   font-family: monospace;
-  font-size: 20px;
+  font-size: 18px;
   padding: 1rem 0;
   font-kerning: none;
   line-height: 26px;
@@ -848,7 +848,7 @@ hr {
 }
 @media screen and (max-width: 960px) {
   .dates p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
   .dates-events p {

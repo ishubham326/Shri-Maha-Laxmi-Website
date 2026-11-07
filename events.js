@@ -1,12 +1,7 @@
-// Helper function to pad event lines to 29 chars
 function formatEventLine(date, event, important) {
+  const eventStr = important ? `<strong>${event}</strong>` : event;
   const dateStr = String(date).padStart(2, "0");
-  let eventStr = important ? `<strong>${event}</strong>` : event;
-  // Remove HTML tags for dot calculation
-  const plainEvent = event;
-  // If eventStr contains <strong>, don't count those tags in length
-  const eventLen = event.length;
-  const dots = ".".repeat(29 - 2 - eventLen);
+  const dots = ".".repeat(Math.max(0, 32 - 2 - event.length));
   return `<p>${dateStr}${dots}${eventStr}</p>`;
 }
 
@@ -33,9 +28,15 @@ function renderCalendar(events) {
   }
 }
 
-// Load JSON and render
-fetch("2026-events.json")
-  .then((res) => res.json())
-  .then((data) => {
-    renderCalendar(data);
-  });
+// Load the event data for the year shown on this calendar page
+const calendarYear = document
+  .querySelector(".cal-download-buttons h6")
+  ?.textContent.trim();
+
+if (calendarYear) {
+  fetch(`${calendarYear}-events.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      renderCalendar(data);
+    });
+}
