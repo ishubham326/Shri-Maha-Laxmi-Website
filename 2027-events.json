@@ -27,8 +27,8 @@
     { "date": 13, "event": "Durga Ashtami", "important": true },
     { "date": 14, "event": "Ram Navami", "important": true },
     { "date": 16, "event": "Kamada Ekadashi", "important": false },
-    { "date": 20, "event": "Hanuman Jayanti", "important": true },
-    { "date": 20, "event": "Satyanarayan Vrat", "important": false }
+    { "date": 19, "event": "Satyanarayan Vrat", "important": false },
+    { "date": 20, "event": "Hanuman Jayanti", "important": true }
   ],
   "May": [
     { "date": 2, "event": "Varuthini Ekadashi", "important": false },
@@ -41,13 +41,13 @@
     { "date": 4, "event": "Shani Jayanti", "important": false },
     { "date": 13, "event": "Ganga Dashami", "important": true },
     { "date": 14, "event": "Nirjala Ekadashi", "important": false },
-    { "date": 18, "event": "Satyanarayan Vrat", "important": false },
+    { "date": 17, "event": "Satyanarayan Vrat", "important": false },
     { "date": 30, "event": "Yogini Ekadashi", "important": false }
   ],
   "July": [
     { "date": 13, "event": "Devshayani Ekadashi", "important": false },
+    { "date": 17, "event": "Satyanarayan Vrat", "important": false },
     { "date": 18, "event": "Guru Purnima", "important": true },
-    { "date": 18, "event": "Satyanarayan Vrat", "important": false },
     { "date": 19, "event": "Shraavan Som Begins", "important": true },
     { "date": 29, "event": "Kamika Ekadashi", "important": false }
   ],
@@ -56,11 +56,11 @@
     { "date": 16, "event": "Satyanarayan Vrat", "important": false },
     { "date": 16, "event": "Raksha Bandhan", "important": true },
     { "date": 16, "event": "Shravan Som Ends", "important": true },
-    { "date": 25, "event": "Krishn Janmashtami", "important": true },
+    { "date": 24, "event": "Krishn Janmashtami", "important": true },
     { "date": 27, "event": "Aja Ekadashi", "important": false }
   ],
   "September": [
-    { "date": 3, "event": "Ganesh Chaturthi", "important": true },
+    { "date": 3, "event": "Ganesh Jayanti", "important": true },
     { "date": 7, "event": "Shri Radha Ashtami", "important": true },
     { "date": 11, "event": "Padma Ekadashi", "important": false },
     { "date": 14, "event": "Ganesh Visarjan", "important": true },
